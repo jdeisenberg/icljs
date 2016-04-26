@@ -1,0 +1,13 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="185" height="120"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g transform="scale(2)">
+	<path style="stroke:black; stroke-width: 0.2; fill:none;"
+	   d="M35 10 L 40 20 M 50 20 L 55 10
+		M0 20 L 40 20 M 50 20 L90 20 90 50 50 50 M 40 50 0 50 0 20
+	   M 40 50 L 35 60 M 50 50 L 55 60"/>
+	</g>
+</svg>
