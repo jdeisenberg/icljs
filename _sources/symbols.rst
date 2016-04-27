@@ -27,7 +27,7 @@ because you said that *x* symbolizes 5, and five certainly does not equal six!
 Symbols in ClojureScript
 ========================
 
-Symbols in ClojureScript work much like algebraic values. You use the ``def`` function to **bind** a symbol to a value. 
+Symbols in ClojureScript work much like in algebra. You use the ``def`` function to **bind** a symbol to a value. 
 The ``def`` function takes two arguments: the symbol and the value. Once a symbol is bound,
 you can use it in expressions, including definitions of other symbols.
 
