@@ -5,31 +5,48 @@
 Symbols
 :::::::::
 
-Doing arithmetic with concrete numbers is fine, but when you move from algebra to arithmetic, you use variables so that you can manipulate abstract symbols. Similarly, in ClojureScript, you will want to be able to describe transformations of data in abstract terms, and variables help you do this.
+Doing arithmetic with concrete numbers is fine, but when you move from algebra to arithmetic, you use variables so that you can manipulate abstract symbols. Similarly, in ClojureScript, you want to be able to describe transformations of data in abstract terms.  Before we talk about ClojureScript, let’s look a bit more closely at algebraic variables.
 
-How to Define a Variable
+In algebra, when you say something like
+
+    *x* = 5
+    
+that means that you are using the symbol *x* to represent 5. Wherever you have a 5, you can substitute *x*; wherever you have an *x*, you can substitute 5.  Similarly, when you say:
+    
+    *y* = 2*x* + 3
+    
+That means the symbol *y* represents the quantity 2*x* + 3, and you can substitute one for the other. 
+
+Another feature of algebraic symbols is that, once you set them, you can’t change your mind. You can’t be halfway through a calculation and all of a sudden claim that:
+    
+    *x* = 6
+    
+because you said that *x* symbolizes 5, and five certainly does not equal six!
+
+
+Symbols in ClojureScript
 ========================
 
-To define a variable, you use the ``def`` function. It takes two arguments: the name of the
-variable you wish to define, and the value of the variable. Once a variable is defined,
-you can use it in expressions, including definitions of other variables.
+Symbols in ClojureScript work much like algebraic values. You use the ``def`` function to **bind** a symbol to a value. 
+The ``def`` function takes two arguments: the symbol and the value. Once a symbol is bound,
+you can use it in expressions, including definitions of other symbols.
 
-.. activecode:: variable_def
-    :caption: Define Variables Here
+.. activecode:: symbol_def
+    :caption: Define Symbol Bindings Here
     :language: clojurescript
     
     (def years 62)
     (def days (* 365 years))
     days
 
-What’s in a (Variable) Name?
+What’s in a (Symbol) Name?
 ===============================
 
-Variable names, also called *symbols*, must start with a non-numeric character, followed by letters, digits, or any of \*, +, !, -, _, ', and  ?.
+Symbols must start with a non-numeric character, followed by letters, digits, or any of \*, +, !, -, _, ', and  ?.
     
-Making variable names meaningful is an important part of programming.  If, instead of using ``years`` I had used ``y``, the code wouldn’t be as clear; ``y`` could also refer to a graphical *y*-coordinate.
+Making your symbol names meaningful is an important part of programming.  If, instead of using ``years`` I had used ``y``, the code wouldn’t be as clear; ``y`` could also refer to a graphical *y*-coordinate.
 
-Sometimes you might have a variable name that is best described by two words, such as an interest rate. Just calling it ``rate`` is not good; a financial program could have interest rates, penalty rates, or any number of types of rates. You can’t call it ``interest rate`` because you can’t put spaces in a variable name. There are three ways that people solve the problem of writing multi-word variable names:
+Sometimes you might have a symbol that is best described by two words, such as an interest rate. Just calling it ``rate`` is not good; a financial program could have interest rates, penalty rates, or any number of types of rates. You can’t call it ``interest rate`` because you can’t put spaces in a symbol name. There are three ways that people solve the problem of writing multi-word names:
     
 * ``interestRate`` This is called *camel case*, where every word after the first begins with a capital letter (named because the capital letters are distantly reminiscent of a camel’s humps)
 * ``interest_rate`` In this method, words are separated by underscores
@@ -37,14 +54,14 @@ Sometimes you might have a variable name that is best described by two words, su
 
 Again, in terms of meaningfulness, a name like ``ir`` would be far too short, and ``interest-rate-calculated-on-a-per-month-basis`` would be ridiculously long.
 
-.. reveal:: var_reveal_1
+.. reveal:: symbol_reveal_1
     :showtitle: See extra info
     :hidetitle: Hide extra info
 
-    ClojureScript’s rules for variable names give you a great deal of power.
+    ClojureScript’s rules for symbols give you a great deal of power.
     You can abuse that power by writing confusing code like this:
         
-    .. activecode:: variable_def2
+    .. activecode:: symbol_def2
         :caption: How to Ruin Your Life
         :language: clojurescript
         
@@ -55,10 +72,10 @@ Again, in terms of meaningfulness, a name like ``ir`` would be far too short, an
 
     Or you can use that power wisely. For example, by “letter,” ClojureScript doesn’t just mean A through Z;
     you can use alphabetic characters in any language. Here’s
-    the first example with the variable names in Russian:
+    the first example with the names in Russian:
 
-    .. activecode:: variable_def3
-        :caption: Variables aren’t just A-Z
+    .. activecode:: symbol_def3
+        :caption: Letters aren’t just A-Z
         :language: clojurescript
         
         (def лет 62)
@@ -69,13 +86,13 @@ Again, in terms of meaningfulness, a name like ``ir`` would be far too short, an
 You Try It
 ----------
 
-Give this a try: define a variable named ``hours`` and another named ``minutes``. Set them to any values you like. Then define a third variable named ``total-minutes`` that is set to 60 times ``hours``, plus ``minutes``.
+Give this a try: define a symbol named ``hours`` and another named ``minutes``. Bind them to any values you like. Then define a third symbol named ``total-minutes`` that is bound to 60 times ``hours``, plus ``minutes``.
 
-.. tabbed:: variable_def4
+.. tabbed:: symbol_tabs
 
     .. tab:: Question
     
-        .. activecode:: variable_def3
+        .. activecode:: symbol_def3_question
             :above
             :language: clojurescript
 
@@ -83,7 +100,7 @@ Give this a try: define a variable named ``hours`` and another named ``minutes``
 
     .. tab:: Answer
 
-        .. activecode:: arithmetic_exercises
+        .. activecode:: symbol_def3_answer
             :above
             :language: clojurescript
             
