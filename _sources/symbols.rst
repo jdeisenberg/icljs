@@ -13,9 +13,9 @@ In algebra, when you say something like
     
 that means that you are using the symbol *x* to represent 5. Wherever you have a 5, you can substitute *x*; wherever you have an *x*, you can substitute 5.  Similarly, when you say:
     
-    *y* = 2*x* + 3
+    *y* = *x* + 3
     
-That means the symbol *y* represents the quantity 2*x* + 3, and you can substitute one for the other. 
+That means the symbol *y* represents the quantity *x* + 3, and you can substitute one for the other. 
 
 Another feature of algebraic symbols is that, once you set them, you can’t change your mind. You can’t be halfway through a calculation and all of a sudden claim that:
     
@@ -39,6 +39,32 @@ you can use it in expressions, including definitions of other symbols.
     (def days (* 365 years))
     days
 
+.. reveal:: nonprogrammer_sym
+    :showtitle: Click to read this if you have not programmed before
+    :hidetitle: Hide
+    
+    In many other programming languages, symbols are called *variables*, and they are not bound to values as in ClojureScript.
+    Instead, a variable is a name for a location in memory; when you say ``x = 5``, that puts 5 into the memory location labeled ``x``.
+    This operation is called *assigning* to a variable rather than *binding* to a symbol, and it doesn’t work like algebra at all.
+    In these other languages, it’s perfectly valid to say ``x = 6`` and put a new value into the same memory location. In this book, I will use the words
+    “symbol” and “bind” to help you keep ClojureScript’s algebra-like model in mind rather than the model used by other languages.
+
+.. reveal:: programmer_sym
+    :showtitle: Click to read this if you have programmed before
+    :hidetitle: Hide
+
+    You are probably used to a statement like ``x = 5`` being called an *assignment statement* that means
+    “put 5 into a memory location that has been labeled ``x``,” and ``x`` is called a *variable* rather than a symbol.
+    One of the larger hurdles in learning a language like ClojureScript is understanding that its symbols (variables)
+    work more like variables in algebra than like labeled memory locations.
+    That’s why I am using the words “symbol” and “bind” in this book rather than “variable” and “assign,” to help you
+    get used to this different mental model.
+
+.. note::
+
+    Unlike true algebraic symbols, it is possible to re-bind a new value to a symbol in ClojureScript, but you don’t need to do it often.
+    Normally you will consider a binding to be *immutable* |---| once bound, you never change a symbol’s value.
+
 What’s in a (Symbol) Name?
 ===============================
 
@@ -48,8 +74,8 @@ Making your symbol names meaningful is an important part of programming.  If, in
 
 Sometimes you might have a symbol that is best described by two words, such as an interest rate. Just calling it ``rate`` is not good; a financial program could have interest rates, penalty rates, or any number of types of rates. You can’t call it ``interest rate`` because you can’t put spaces in a symbol name. There are three ways that people solve the problem of writing multi-word names:
     
-* ``interestRate`` This is called *camel case*, where every word after the first begins with a capital letter (named because the capital letters are distantly reminiscent of a camel’s humps)
-* ``interest_rate`` In this method, words are separated by underscores
+* ``interestRate`` This is called *camel case*, where every word after the first begins with a capital letter (it’s called camel case because the capital letters are distantly reminiscent of a camel’s humps).
+* ``interest_rate`` In this method, words are separated by underscores.
 * ``interest-rate`` Words are separated by hyphens. This is what you will see most often in ClojureScript.
 
 Again, in terms of meaningfulness, a name like ``ir`` would be far too short, and ``interest-rate-calculated-on-a-per-month-basis`` would be ridiculously long.
@@ -90,7 +116,7 @@ Give this a try: define a symbol named ``hours`` and another named ``minutes``. 
 
 .. tabbed:: symbol_tabs
 
-    .. tab:: Question
+    .. tab:: Try it
     
         .. activecode:: symbol_def3_question
             :above
