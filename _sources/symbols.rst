@@ -5,7 +5,7 @@
 Symbols
 :::::::::
 
-Doing arithmetic with concrete numbers is fine, but when you move from algebra to arithmetic, you use variables so that you can manipulate abstract symbols. Similarly, in ClojureScript, you want to be able to describe transformations of data in abstract terms.  Before we talk about ClojureScript, let’s look a bit more closely at algebraic variables.
+Doing arithmetic with concrete numbers is fine, but when you move from arithmetic to algebra, you use variables so that you can manipulate abstract symbols. Similarly, in ClojureScript, you want to be able to describe transformations of data in abstract terms.  Before we talk about ClojureScript, let’s look a bit more closely at algebraic variables.
 
 In algebra, when you say something like
 
@@ -69,7 +69,7 @@ What’s in a (Symbol) Name?
 ===============================
 
 Symbols must start with a non-numeric character, followed by letters, digits, or any of \*, +, !, -, _, ', and  ?.
-    
+
 Making your symbol names meaningful is an important part of programming.  If, instead of using ``years`` I had used ``y``, the code wouldn’t be as clear; ``y`` could also refer to a graphical *y*-coordinate.
 
 Sometimes you might have a symbol that is best described by two words, such as an interest rate. Just calling it ``rate`` is not good; a financial program could have interest rates, penalty rates, or any number of types of rates. You can’t call it ``interest rate`` because you can’t put spaces in a symbol name. There are three ways that people solve the problem of writing multi-word names:
