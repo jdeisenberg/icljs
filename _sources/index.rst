@@ -17,7 +17,7 @@ Table of Contents
    arithmetic_exercises.rst
    symbols.rst
    diy_functions.rst
-   local_vars.rst
+   local_syms.rst
    
 .. toctree::
    :hidden:
