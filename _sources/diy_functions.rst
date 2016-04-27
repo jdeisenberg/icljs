@@ -36,7 +36,7 @@ Once a function is defined, you can call it just like any other ClojureScript fu
     (average 5 17)
 
 .. reveal:: reveal_params
-    :showtitle: What do you mean by parameters and arguments?
+    :showtitle: Show: What are parameters and arguments?
     :hidetitle: Hide
 
     You can think of a *parameter* as a placeholder variable; it’s “extra information” that a function needs to do its job. For example, if I asked you to “calculate the square root,” you would ask me, “The square root *of what*?”  That “what” is a parameter.
@@ -56,12 +56,41 @@ Here’s another function with two parameters; it finds the area of an ellipse a
     
     Ellipse with semi-major and semi-minor axis
     
-.. activecode::
+.. activecode:: ellipse_area
     :caption: Calculate area of ellipse
     :language: clojurescript
     
     (defn ellipse-area [a b]
       (* 3.14159265 a b))
     
-    (average 3 7)
+    (ellipse-area 3 7)
     
+Now, you try it. Write a function named ``surface-area`` that calculates the surface area of a rectangular prism with sides of length *a*, *b*, and *c*. The formula is 2(*ab* + *bc* + *ac*).
+
+.. figure:: images/prism.png
+    :alt: Rectangular prism with length, height, and width labeled a, b, and c
+    
+    Rectangular prism
+
+.. container:: full_width
+
+    .. tabbed:: rect_q
+
+        .. tab:: Your Program
+        
+            .. activecode:: prism
+                :language: clojurescript
+                
+                ; your code here
+                
+                (surface-area 3 5 7) ; answer should be 142
+                
+        .. tab:: Answer
+            
+            .. activecode:: prism_answer
+                :language: clojurescript
+                
+                (defn surface-area [a b c]
+                    (* 2 (+ (* a b) (* b c) (* a c))))
+                    
+                (surface-area 3 5 7)
