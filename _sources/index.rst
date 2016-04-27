@@ -3,88 +3,6 @@
 ====================================
 Transforming Data with ClojureScript
 ====================================
-.. |rs| unicode:: U+2019   .. right single quote
-   :trim:
-.. |ld| unicode:: U+201C   .. left double quote
-   :trim:
-.. |rd| unicode:: U+201D   .. right double quote
-   :trim:
-.. |--| unicode:: U+2013   .. en dash
-   :trim:
-.. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
-   :trim:
-.. |o| unicode:: U+00B0 .. degree
-   :trim:
-
-Preface
-:::::::
-
-Explaining the Title
-====================
-
-If you are wondering why this book isn |rs| t called *Programming with ClojureScript*, it |rs| s becaue the book is going to focus on the main task that programming does |---| transforming data.
-
-Transforming Data
------------------
-
-Consider this list of minimum and maximum temperatures over a seven-day period in February, 2016 in Tokyo, Japan:  (3 9, 2 13, 4 10, 4 9, 4 12, 9 20, 16 21). You could transform this to find:
-    
-* The week |rs| s minimum and maximum temperatures: 2 |o| C and 21 |o| C
-* The average minimum and maximum temperatures:  13.43 |o| C and 6 |o| C
-* The standard deviations: 5.06 and 4.93
-
-You might even transform the data to a set of *x* and *y* coordinates to create a graph:
-    
-*graphic will go here as soon as I write the code for it*
-
-If you think about it, most of what you do in programs is transformation of data. When you
-make an online purchase, the quantity, price, and customer information gets transformed into a record
-somewhere in a database. That data gets transformed into purchse orders, receipts, emails, and
-a host of other forms. Once you start thinking in terms of transformations, you will see them everywhere.
-
-With ClojureScript
-------------------
-
-In the world of mathematics, functions are the tools used to transform data. This is what the **functional
-programming** paradigm in the world of programming aims for: to describe algorithms as a series of
-functions that transform input to a desired output.
-
-There are many functional programming languages out there, but I decided to go with
-ClojureScript_ because it has a simple syntax that is similar to other languages such as Lisp_,
-Scheme_, and Racket_, and it comples to JavaScript_, which is `eating the world`_. 
-This makes it possible to write an interactive book.
-
-.. _ClojureScript: https://github.com/clojure/clojurescript
-.. _Lisp: https://en.wikipedia.org/wiki/Lisp_%28programming_language%29
-.. _Scheme: https://en.wikipedia.org/wiki/Scheme_%28programming_language%29
-.. _Racket: http://racket-lang.org/
-.. _JavaScript: https://en.wikipedia.org/wiki/JavaScript
-.. _eating the world: http://arc.applause.com/2015/11/06/javascript-is-eating-the-world
-
-Pacing of the Book
-==================
-
-For each main topic, my plan is to introduce the topic, give you enough information to get you started using it, then backing up and filling in details to help you use it better.
-
-How to Use This Book
-====================
-
-This book is designed to live on a web site. It will give you opportunities to try out ClojureScript directly in the browser. For example, you can click
-the **Run** button to have ClojureScript add three and five (you’ll see why it’s written this way later on in the book). You can change the numbers,
-click **Run** again, and see the results.
-
-.. activecode:: index1
-    :language: clojurescript
-    
-    (+ 3 5)
-    
-Sometimes I’ll give some extra information that is nice, but not necessary, to know. Click the **Show Further Information** button to see it:
-    
-.. reveal:: reveal_index
-    :showtitle: Show Further Information
-    :hidetitle: Hide Further Information
-    
-    ...and here it is! Once you finish reading the extra material, you can click the hide button to hide it.
 
 
 Table of Contents
@@ -93,12 +11,14 @@ Table of Contents
 .. toctree::
    :maxdepth: 2
 
+   preface.rst
    functions.rst
    functions_in_cljs.rst
    advanced_arithmetic.rst
    arithmetic_exercises.rst
-   variables.rst
+   symbols.rst
    diy_functions.rst
+   local_vars.rst
    
 .. toctree::
    :hidden:
