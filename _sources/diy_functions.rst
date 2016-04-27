@@ -17,7 +17,7 @@ Let’s start with implementing an ``average`` function that takes two arguments
     (defn average [a b]
       (/ (+ a b) 2.0))
 
-Let’s analyze this step by step:
+Analyzing this step by step:
     
 * ``defn`` is the name of a function that defines functions
 * The first argument to ``defn`` is the function name: ``average``
@@ -39,15 +39,15 @@ Once a function is defined, you can call it just like any other ClojureScript fu
     :showtitle: Show: What are parameters and arguments?
     :hidetitle: Hide
 
-    You can think of a *parameter* as a placeholder variable; it’s “extra information” that a function needs to do its job. For example, if I asked you to “calculate the square root,” you would ask me, “The square root *of what*?”  That “what” is a parameter.
+    You can think of a *parameter* as a placeholder; it’s “extra information” that a function needs to do its job. For example, if I asked you to “calculate the square root,” you would ask me, “The square root *of what*?”  That “what” is a parameter.
     
-    When you call the function, you have to provide a value to fill in that placeholder; you have to provide the number whose square root you want. That value is the *argument* to the function.
+    When you call the function, you have to provide a value to bind to that placeholder; you have to provide the number whose square root you want. That value is the *argument* to the function.
     
-    A **p**\arameter is a **p**\laceholder variable in the defintion of the function.
+    A **p**\arameter is a **p**\laceholder symbol in the defintion of the function.
     
-    An **a**\rgument is the **a**\ctual value that will fill in the placeholder.
+    An **a**\rgument is the **a**\ctual value that will bind to the placeholder.
                                                                                 
-    So, in the preceding example, ``a`` and ``b`` are the parameters; when you make the function call, the ``5`` and ``17`` are the arguments whose values will be copied into the parameter variables.
+    So, in the preceding example, ``a`` and ``b`` are the parameters; when you make the function call, the ``5`` and ``17`` are the arguments whose values will be bound to the parameters.
     
 Here’s another function with two parameters; it finds the area of an ellipse as shown in the following figure, using the formula π ∙ a ∙ b:
     
