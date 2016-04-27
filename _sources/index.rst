@@ -4,7 +4,6 @@
 Transforming Data with ClojureScript
 ====================================
 
-
 Table of Contents
 =================
 
