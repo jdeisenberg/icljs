@@ -46,7 +46,7 @@ you can use it in expressions, including definitions of other symbols.
     In many other programming languages, symbols are called *variables*, and they are not bound to values as in ClojureScript.
     Instead, a variable is a name for a location in memory; when you say ``x = 5``, that puts 5 into the memory location labeled ``x``.
     This operation is called *assigning* to a variable rather than *binding* to a symbol, and it doesn’t work like algebra at all.
-    In these other languages, it’s perfectly valid to say ``x = 6`` and put a new value into the same memory location. In this book, I will use the words
+    In these other languages, it’s perfectly valid to say ``x = 6``, which puts a new value into the same memory location. In this book, I will use the words
     “symbol” and “bind” to help you keep ClojureScript’s algebra-like model in mind rather than the model used by other languages.
 
 .. reveal:: programmer_sym
@@ -114,23 +114,25 @@ You Try It
 
 Give this a try: define a symbol named ``hours`` and another named ``minutes``. Bind them to any values you like. Then define a third symbol named ``total-minutes`` that is bound to 60 times ``hours``, plus ``minutes``.
 
-.. tabbed:: symbol_tabs
+.. container:: full_width
 
-    .. tab:: Try it
-    
-        .. activecode:: symbol_def3_question
-            :above
-            :language: clojurescript
+    .. tabbed:: symbol_tabs
 
-            ; Your code here
+        .. tab:: Try it
+        
+            .. activecode:: symbol_def3_question
+                :above
+                :language: clojurescript
 
-    .. tab:: Answer
+                ; Your code here
 
-        .. activecode:: symbol_def3_answer
-            :above
-            :language: clojurescript
-            
-            (def hours 3)
-            (def minutes 54)
-            (def total-minutes (+ (* hours 60) minutes))
-            total-minutes
+        .. tab:: Answer
+
+            .. activecode:: symbol_def3_answer
+                :above
+                :language: clojurescript
+                
+                (def hours 3)
+                (def minutes 54)
+                (def total-minutes (+ (* hours 60) minutes))
+                total-minutes

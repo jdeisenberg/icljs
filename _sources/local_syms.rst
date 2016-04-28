@@ -45,3 +45,51 @@ Going through it step by step:
 * ...and the closing parenthesis of the ``let`` clause.
 
 The symbols defined in the ``let`` vector are local to the ``(let...)``. No other function, or even an expression outside the ``let`` in the same function, has access to those bindings.
+
+Try It
+------
+
+This example is from the world of accounting. Write a function named ``internal-growth-rate`` that calculates the rate at which a company can grow without requiring external financing.
+
+To calculate this, you need to know three things; these will be the function’s parameters:
+    
+* The company’s net income
+* The company’s total assets
+* Dividends that the company pays.
+
+Calculate these things:
+   
+* The dividend payout ratio, which is dividends divided by net income
+* The retention ratio (symbolized by *b*), which is 1 minus the dividend payout ratio
+* The return on assets *ROA*, which is net income divided by total assets
+* The internal growth rate *IGR* is *ROA* * *b* / (1 - *ROA* * b)
+
+As you can see, there is plenty of use for ``let`` in this function!
+
+.. container:: full_width
+
+    .. tabbed:: igr_q
+
+        .. tab:: Your Program
+        
+            .. activecode:: igr
+                :language: clojurescript
+                
+                ; your code here
+                
+                (internal-growth-rate 100000 400000 20000) ; answer should be 0.25
+                
+        .. tab:: Answer
+            
+            .. activecode:: igr_answer
+                :language: clojurescript
+                
+                (defn internal-growth-rate [income assets dividends]
+                    (let [dividend-ratio (/ dividends income)
+                          b (- 1 dividend-ratio)
+                          roa (/ income assets)]
+                        (/ (* roa b) (- 1 (* roa b)))))
+                    
+                (internal-growth-rate 100000 400000 20000)
+
+

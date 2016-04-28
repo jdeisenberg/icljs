@@ -27,7 +27,7 @@ Bringing back the addition function box from the previous page:
    
    Addition as a function box
 
-If you want to add 3 and 5 in ClojureScript, you write an open parenthesis, the name of the function (in this case, its name is ``+``\), the arguments, and the closing parenthesis.
+If you want to add 3 and 5 in ClojureScript, you write the following *expression*: an open parenthesis, the name of the function (in this case, its name is ``+``\), the arguments, and the closing parenthesis.
 
 .. activecode:: add1
     :caption: Simple Addition
@@ -35,27 +35,27 @@ If you want to add 3 and 5 in ClojureScript, you write an open parenthesis, the 
     
     (+ 3 5)
     
-In keeping with the philosophy of this book, you didn’t merely add 3 and 5, you transformed the numbers 3 and 5 into 8 by applying the add function to them. OK, so how would you apply the multiply function to the numbers 8 and 9 to get their product? Or, in more ordinary terminology, how would you use the ``*`` function to multiply 8 by 9? 
+In keeping with the philosophy of this book, you didn’t merely add 3 and 5, you transformed the numbers 3 and 5 into 8 by applying the add function to them. OK, so how would you write an expression that applies the multiply function to the numbers 8 and 9 to get their product? Or, in more ordinary terminology, write an expression that uses the ``*`` function to multiply 8 by 9.
 Try it in the active code box below. (Note: the line beginning with ``;`` is a *comment*. Comments are for us humans to read; the computer ignores the semicolon and everything
 else on that line.)
 
 .. tabbed:: functions_tab1
 
-    .. tab:: Try it
-    
-        .. activecode:: multiply1
-            :caption: Simple Multiplication
-            :language: clojurescript
-            
-            ; Write your code here
+.. tab:: Try it
 
-    .. tab:: Answer
+.. activecode:: multiply1
+    :caption: Simple Multiplication
+    :language: clojurescript
     
-        .. activecode:: multiply1_answer
-            :caption: Simple Multiplication
-            :language: clojurescript
-            
-            (* 8 9)
+    ; Write your code here
+
+.. tab:: Answer
+
+.. activecode:: multiply1_answer
+    :caption: Simple Multiplication
+    :language: clojurescript
+        
+    (* 8 9)
 
 In both these cases, it doesn’t matter which order you put the numbers, since addition and multiplication
 are commutative (a fancy math term for “order doesn’t matter”). But what about division and subtraction, where order *does* matter? Which number comes first? Try doing a function call using the ``/`` function to divide 8 by 2. Experiment with both orders to see which one gives you the correct answer of 4.
