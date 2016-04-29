@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <msqrt>
+   <mrow>
+    <msup>
+     <mrow>
+      <mo fence="true" stretchy="false">(</mo>
+      <mrow>
+       <mrow>
+        <mi>x</mi>
+        <mrow>
+         <mn>1</mn>
+         <mo stretchy="false">−</mo>
+         <mi>x</mi>
+        </mrow>
+        <mn>2</mn>
+       </mrow>
+      </mrow>
+      <mo fence="true" stretchy="false">)</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+    <mo stretchy="false">+</mo>
+    <msup>
+     <mrow>
+      <mo fence="true" stretchy="false">(</mo>
+      <mrow>
+       <mrow>
+        <mi>y</mi>
+        <mrow>
+         <mn>1</mn>
+         <mo stretchy="false">−</mo>
+         <mi>y</mi>
+        </mrow>
+        <mn>2</mn>
+       </mrow>
+      </mrow>
+      <mo fence="true" stretchy="false">)</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+   </mrow>
+  </msqrt>
+  <annotation encoding="StarMath 5.0">sqrt{ (x1-x2)^2 + (y1-y2)^2 }</annotation>
+ </semantics>
+</math>
