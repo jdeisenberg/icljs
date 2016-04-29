@@ -1,4 +1,4 @@
-..  Copyright © J David Eisenberg and O'Reilly Media
+..  Copyright © J David Eisenberg
 
 ====================================
 Transforming Data with ClojureScript
@@ -10,16 +10,12 @@ Table of Contents
 .. toctree::
    :maxdepth: 2
 
-   preface.rst
-   functions.rst
-   functions_in_cljs.rst
-   advanced_arithmetic.rst
-   arithmetic_exercises.rst
-   symbols.rst
-   diy_functions.rst
-   local_syms.rst
-   
-.. toctree::
-   :hidden:
-   
-   floatingpoint.rst
+   preface
+   functions
+   functions_in_cljs
+   advanced_arithmetic
+   arithmetic_exercises
+   symbols
+   diy_functions
+   local_syms
+   recap1

@@ -1,5 +1,5 @@
-.. |--| unicode:: U+2013   .. en dash
-   :trim:
+..  Copyright © J David Eisenberg
+
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
 .. |o| unicode:: U+00B0 .. degree

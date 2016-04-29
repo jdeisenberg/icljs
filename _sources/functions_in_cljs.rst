@@ -1,4 +1,4 @@
-..  Copyright © J David Eisenberg and O'Reilly Media
+..  Copyright © J David Eisenberg
 .. |rs| unicode:: U+2019   .. right single quote
    :trim:
 .. |ld| unicode:: U+201C   .. left double quote
@@ -39,23 +39,25 @@ In keeping with the philosophy of this book, you didn’t merely add 3 and 5, yo
 Try it in the active code box below. (Note: the line beginning with ``;`` is a *comment*. Comments are for us humans to read; the computer ignores the semicolon and everything
 else on that line.)
 
-.. tabbed:: functions_tab1
+.. container:: full_width
 
-.. tab:: Try it
+    .. tabbed:: functions_tab1
 
-.. activecode:: multiply1
-    :caption: Simple Multiplication
-    :language: clojurescript
-    
-    ; Write your code here
+        .. tab:: Try it
 
-.. tab:: Answer
+            .. activecode:: multiply1
+                :caption: Simple Multiplication
+                :language: clojurescript
+                
+                ; Write your code here
 
-.. activecode:: multiply1_answer
-    :caption: Simple Multiplication
-    :language: clojurescript
-        
-    (* 8 9)
+        .. tab:: Answer
+
+            .. activecode:: multiply1_answer
+                :caption: Simple Multiplication
+                :language: clojurescript
+                    
+                (* 8 9)
 
 In both these cases, it doesn’t matter which order you put the numbers, since addition and multiplication
 are commutative (a fancy math term for “order doesn’t matter”). But what about division and subtraction, where order *does* matter? Which number comes first? Try doing a function call using the ``/`` function to divide 8 by 2. Experiment with both orders to see which one gives you the correct answer of 4.

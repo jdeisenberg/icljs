@@ -1,4 +1,4 @@
-..  Copyright © J David Eisenberg and O'Reilly Media
+..  Copyright © J David Eisenberg
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
 
@@ -22,7 +22,7 @@ Analyzing this step by step:
 * ``defn`` is the name of a function that defines functions
 * The first argument to ``defn`` is the function name: ``average``
 * The next argument is a *vector* of parameter names. A vector is a sequence of items in square brackets. (You will learn more about vectors in *link goes here*.) This function needs two inputs, so there are two items in the vector. In this case, they have generic names: ``a`` and ``b``.
-* The last argument to ``defn`` is the *function body.* The result of evaluating the function body: ``(/ (+ a b) 2.0)`` is the function result.
+* The last argument to ``defn`` is the *function body.* In this case, it consists of one expression: ``(/ (+ a b) 2.0)``. The last expression in the function body is the function’s result.
 
 Once a function is defined, you can call it just like any other ClojureScript function; you give its name after an opening parenthesis, follow it by the arguments you want to transform, and close the parentheses.
 

@@ -1,4 +1,4 @@
-..  Copyright © J David Eisenberg and O'Reilly Media
+..  Copyright © J David Eisenberg
 Exercises in Arithmetic
 :::::::::::::::::::::::::::::
 

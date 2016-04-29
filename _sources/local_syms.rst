@@ -1,4 +1,4 @@
-..  Copyright © J David Eisenberg and O'Reilly Media
+..  Copyright © J David Eisenberg
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
 
