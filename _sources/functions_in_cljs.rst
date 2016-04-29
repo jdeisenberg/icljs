@@ -1,16 +1,8 @@
 ..  Copyright © J David Eisenberg
-.. |rs| unicode:: U+2019   .. right single quote
-   :trim:
-.. |ld| unicode:: U+201C   .. left double quote
-   :trim:
-.. |rd| unicode:: U+201D   .. right double quote
-   :trim:
-.. |--| unicode:: U+2013   .. en dash
-   :trim:
+
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
-.. |o| unicode:: U+00B0 .. degree
-   :trim:
+
 
 Functions in ClojureScript
 ::::::::::::::::::::::::::
