@@ -19,3 +19,4 @@ Table of Contents
    diy_functions
    local_syms
    recap1
+   js_interact1

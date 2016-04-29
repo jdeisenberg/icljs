@@ -29,7 +29,7 @@ Symbols in ClojureScript
 
 Symbols in ClojureScript work much like in algebra. You use the ``def`` function to **bind** a symbol to a value. 
 The ``def`` function takes two arguments: the symbol and the value. Once a symbol is bound,
-you can use it in expressions, including definitions of other symbols.
+you can use it in expressions, including definitions of other symbols. The value can be an expression as well:
 
 .. activecode:: symbol_def
     :caption: Define Symbol Bindings Here
