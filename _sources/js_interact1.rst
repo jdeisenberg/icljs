@@ -5,7 +5,8 @@
 Interacting with JavaScript
 :::::::::::::::::::::::::::::::
 
-Let’s say you wanted to write a function to find the distance between two points (*x1*, *y1*) and (*x2*, *y2*), using the Pythagorean distance formula:
+Let’s say you wanted to write a function to find the distance between two points (*x*\ :sub:`1`\ , *y*\ :sub:`1`\ )
+and (*x*\ :sub:`2`\ , *y*\ :sub:`2`\ ), using the Pythagorean distance formula:
 
 .. raw:: html
 
@@ -18,13 +19,15 @@ Let’s say you wanted to write a function to find the distance between two poin
         <mo fence="true" stretchy="false">(</mo>
         <mrow>
         <mrow>
+            <msub>
             <mi>x</mi>
-            <mrow>
             <mn>1</mn>
+            </msub>
             <mo stretchy="false">−</mo>
+            <msub>
             <mi>x</mi>
-            </mrow>
             <mn>2</mn>
+            </msub>
         </mrow>
         </mrow>
         <mo fence="true" stretchy="false">)</mo>
@@ -37,13 +40,15 @@ Let’s say you wanted to write a function to find the distance between two poin
         <mo fence="true" stretchy="false">(</mo>
         <mrow>
         <mrow>
+            <msub>
             <mi>y</mi>
-            <mrow>
             <mn>1</mn>
+            </msub>
             <mo stretchy="false">−</mo>
+            <msub>
             <mi>y</mi>
-            </mrow>
             <mn>2</mn>
+            </msub>
         </mrow>
         </mrow>
         <mo fence="true" stretchy="false">)</mo>
@@ -52,7 +57,7 @@ Let’s say you wanted to write a function to find the distance between two poin
         </msup>
     </mrow>
     </msqrt>
-    <annotation encoding="StarMath 5.0">sqrt{ (x1-x2)^2 + (y1-y2)^2 }</annotation>
+    <annotation encoding="StarMath 5.0">sqrt{ (x_1-x_2)^2 + (y_1-y_2)^2 }</annotation>
     </semantics>
     </math>
     
@@ -100,9 +105,9 @@ Quick summary: to call a method, precede its name with a dot. To get a property�
     
     ; Try the examples.
 
-Exercise
+Exercises
 ----------
-
+        
 .. container:: full_width
 
     .. tabbed:: radians_q
@@ -113,13 +118,13 @@ Exercise
             people think of angles in degrees. Write a function named ``to-radians`` that converts its argument
             in degrees to radians. You convert to radians by multiplying by pi and dividing by 180. Use the ``PI``
             property of the ``Math`` object in your solution.
-            
+
             .. _radians: https://en.wikipedia.org/wiki/Radian
-            
+
             Then use your ``to-radians`` function to calculate the sine of 30 degrees.
             Due to accuracy of math, the result of running
             your code will be something like 0.4999999... instead of exactly 0.5
-        
+
             .. activecode:: radians_q
                 :language: clojurescript
                 
@@ -135,3 +140,70 @@ Exercise
                     (/ (* degrees (.-PI js/Math)) 180))
                     
                 (.sin js/Math (to-radians 30))
+
+
+
+.. container:: full_width
+
+    .. tabbed:: interest_q
+
+        .. tab:: Your Program
+
+            Write a function named ``compounding`` that takes four arguments and
+            uses this formula for compound interest:
+                
+            .. raw:: html
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <semantics>
+                <mrow>
+                <mi>P</mi>
+                <msup>
+                    <mrow>
+                    <mo fence="true" stretchy="false">(</mo>
+                    <mrow>
+                    <mrow>
+                    <mn>1</mn>
+                    <mo stretchy="false">+</mo>
+                    <mfrac>
+                        <mi>r</mi>
+                        <mi>n</mi>
+                    </mfrac>
+                    </mrow>
+                    </mrow>
+                    <mo fence="true" stretchy="false">)</mo>
+                    </mrow>
+                    <mi mathvariant="italic">nt</mi>
+                </msup>
+                </mrow>
+                <annotation encoding="StarMath 5.0">P( 1 + r over n )^{ nt}</annotation>
+                </semantics>
+                </math>            
+
+            Where *P* is the principal, *r* is the interest rate, *n* is the number of times
+            per year the interest is compounded, and *t* is the number of years you accumulate
+            interest.
+
+            To raise a number to a power, use JavaScript ``Math`` object’s ``pow`` function. For example,
+            to calculate 3 to the 5th power, you would say ``(.pow js/Math 3 5)``
+
+            Then use your function to calculate the value of a $1,000 principal at an interest rate of
+            5% (that is, *r* is 0.05), calculated four times a year for 20 years.
+
+            .. activecode:: interest_q
+                :language: clojurescript
+                
+                (compounding 1000 0.05 4 20)
+                
+        .. tab:: Answer
+            
+            .. activecode:: interest_answer
+                :language: clojurescript
+                
+                (defn compounding [principal rate n t]
+                    (* principal (.pow js/Math (+ 1 (/ rate n)) (* n t))))
+                    
+                (compounding 1000 0.05 4 20)
+
+
+We’ll come back to JavaScript later when we discuss interaction with a web page.

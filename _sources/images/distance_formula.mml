@@ -9,13 +9,15 @@
       <mo fence="true" stretchy="false">(</mo>
       <mrow>
        <mrow>
-        <mi>x</mi>
-        <mrow>
-         <mn>1</mn>
-         <mo stretchy="false">−</mo>
+        <msub>
          <mi>x</mi>
-        </mrow>
-        <mn>2</mn>
+         <mn>1</mn>
+        </msub>
+        <mo stretchy="false">−</mo>
+        <msub>
+         <mi>x</mi>
+         <mn>2</mn>
+        </msub>
        </mrow>
       </mrow>
       <mo fence="true" stretchy="false">)</mo>
@@ -28,13 +30,15 @@
       <mo fence="true" stretchy="false">(</mo>
       <mrow>
        <mrow>
-        <mi>y</mi>
-        <mrow>
-         <mn>1</mn>
-         <mo stretchy="false">−</mo>
+        <msub>
          <mi>y</mi>
-        </mrow>
-        <mn>2</mn>
+         <mn>1</mn>
+        </msub>
+        <mo stretchy="false">−</mo>
+        <msub>
+         <mi>y</mi>
+         <mn>2</mn>
+        </msub>
        </mrow>
       </mrow>
       <mo fence="true" stretchy="false">)</mo>
@@ -43,6 +47,6 @@
     </msup>
    </mrow>
   </msqrt>
-  <annotation encoding="StarMath 5.0">sqrt{ (x1-x2)^2 + (y1-y2)^2 }</annotation>
+  <annotation encoding="StarMath 5.0">sqrt{ (x_1-x_2)^2 + (y_1-y_2)^2 }</annotation>
  </semantics>
 </math>
