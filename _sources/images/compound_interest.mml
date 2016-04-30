@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mi>P</mi>
+   <msup>
+    <mrow>
+     <mo fence="true" stretchy="false">(</mo>
+     <mrow>
+      <mrow>
+       <mn>1</mn>
+       <mo stretchy="false">+</mo>
+       <mfrac>
+        <mi>r</mi>
+        <mi>n</mi>
+       </mfrac>
+      </mrow>
+     </mrow>
+     <mo fence="true" stretchy="false">)</mo>
+    </mrow>
+    <mi mathvariant="italic">nt</mi>
+   </msup>
+  </mrow>
+  <annotation encoding="StarMath 5.0">P( 1 + r over n )^{ nt}</annotation>
+ </semantics>
+</math>
