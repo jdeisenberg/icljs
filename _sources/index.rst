@@ -20,15 +20,11 @@ Table of Contents
    local_syms
    recap1
    js_interact1
+   conditionals
 
 List of sections to be written; order and number of topics may change. (YMMV)
 
-* Conditionals
-    * ``if``
-    * ``cond``
-    * ``condp``
-    * Compound conditions
-    * boolean variables
+* Interlude: What Programming is About
 * Strings
 * Accessing HTML Forms
     * Impure functions
@@ -39,6 +35,7 @@ List of sections to be written; order and number of topics may change. (YMMV)
         * ``map``
         * ``reduce``
     * Maps
+    * Destructuring
     * Sets
 * Regular Expressions
 * Appendix A: Basics of HTML
