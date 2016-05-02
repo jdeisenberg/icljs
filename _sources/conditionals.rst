@@ -57,7 +57,8 @@ Let’s see how this works in a program. I have moved the code for calculating t
 Functions that test conditions
 ------------------------------
 
-ClojureScript defines these functions for testing conditions. All of the examples shown will evaluate to ``true``.
+ClojureScript defines these functions for testing conditions.
+All these functions return ``true`` or ``false`` as their value; all of these examples will evaluate to ``true``.
     
 +-----------+-----------------------+-----------------+
 | Function  | Means                 | Example         |
@@ -75,11 +76,10 @@ ClojureScript defines these functions for testing conditions. All of the example
 | not=      | not equal             | (not= 17 3)     |
 +-----------+-----------------------+-----------------+
 
+Sequences of conditions: ``cond``
+========================================
 
-Many different conditions: ``cond`` and ``condp``
-===================================================
-
-What happens if you decide to have multiple levels of discount, depending upon quantity?
+What happens if you want multiple levels of discount depending upon quantity?
 
 +----------+----------+
 | Quantity | Discount |
@@ -131,6 +131,19 @@ But that’s really difficult to read, and with a few more choices, the parenthe
     (calc-discount 15)
 
 The value for the last test, ``:else``, is chosen if none of the other conditions came out true.
+
+There is no law that says all the conditions must test the same variable. Consider a cinema that charges $4.00 at all times for children under age 10,
+$6.00 all day on Mondays (day 1 of the week), $7.50 before 3 p.m. and $8.50 after that on all other days of the week.
+
+::
+    
+    (defn ticket-price [age day hour]
+        (cond
+            (< age 10) 4.00
+            (= day 1) 6.00
+            (<= hour 14) 7.50
+            :else 8.50))
+
 
 Compound conditions: ``and`` and ``or``
 ========================================
