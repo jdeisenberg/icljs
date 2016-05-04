@@ -26,9 +26,9 @@ You might even transform the data to a set of *x* and *y* coordinates to create 
     
 *graphic will go here as soon as I write the code for it*
 
-If you think about it, most of what you do in programs is transformation of data. When you
+If you think about it, most of what computers do is transformation of data. When you
 make an online purchase, the quantity, price, and customer information gets transformed into a record
-somewhere in a database. That data gets transformed into purchse orders, receipts, emails, and
+somewhere in a database. That data gets transformed into purchase orders, receipts, emails, and
 a host of other forms. Once you start thinking in terms of transformations, you will see them everywhere.
 
 With ClojureScript
@@ -41,7 +41,6 @@ functions that transform input to a desired output.
 There are many functional programming languages out there, but I decided to go with
 ClojureScript_ because it has a simple syntax that is similar to other languages such as Lisp_,
 Scheme_, and Racket_, and it comples to JavaScript_, which is `eating the world`_. 
-This makes it possible to write an interactive book.
 
 .. _ClojureScript: https://github.com/clojure/clojurescript
 .. _Lisp: https://en.wikipedia.org/wiki/Lisp_%28programming_language%29
@@ -77,7 +76,7 @@ For each main topic, my plan is to introduce the topic, give you enough informat
 How to Use This Interactive Book
 ================================
 
-This book is designed to live on a web site. It will give you opportunities to try out ClojureScript directly in the browser. For example, you can click
+Because ClojureScript translates to JavaScript, it is possible to make an interactive book that is designed to live on a web site. This book will give you opportunities to try out ClojureScript directly in the browser. For example, you can click
 the **Run** button to have ClojureScript add three and five (you’ll see why it’s written this way later on in the book). You can change the numbers,
 click **Run** again, and see the results.
 
