@@ -98,7 +98,7 @@ Here are some common tasks you will do with JavaScript objects, and how you do t
 | Set a property's value | ``(set! (.-property js/object) value)`` | ``(set! (.-title js/document) 'New Title')`` |
 +------------------------+-----------------------------------------+----------------------------------------------+
 
-Quick summary: to call a method, precede its name with a dot. To get a property’s value, precede its name with a dot and dash. To create a new property, follow its name with a dot.
+Quick summary: to call a method, precede its name with a dot. To get a property’s value, precede its name with a dot and dash. To create a new object, follow its class name with a dot.
 
 .. activecode:: try-objects
     :language: clojurescript

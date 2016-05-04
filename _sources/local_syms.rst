@@ -57,7 +57,7 @@ To calculate this, you need to know three things; these will be the function’s
 * The company’s total assets
 * Dividends that the company pays.
 
-Calculate these things:
+To calculate the internal growth rate, you must calculate these things:
    
 * The dividend payout ratio, which is dividends divided by net income
 * The retention ratio (symbolized by *b*), which is 1 minus the dividend payout ratio
