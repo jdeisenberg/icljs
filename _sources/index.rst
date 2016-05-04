@@ -21,6 +21,7 @@ Table of Contents
    recap1
    js_interact1
    conditionals
+   strings
 
 List of sections to be written; order and number of topics may change. (YMMV)
 
