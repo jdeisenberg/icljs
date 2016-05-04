@@ -7,7 +7,7 @@ Local Bindings
 
 You may have noticed that all the functions on the previous page had parameters named ``a`` and ``b``. You may also have wondered how it was possible to use the same symbol in both functions without a conflict.
 
-The reason is that parameters are *local* to the function where they are defined. They “belong” to that function, and that function only. No other function can access those symbols or interfere with them. This is a Good Thing™, because you can give your parameters any names you please with absolute confidence that they will never conflict with the names of parameters in other functions you use.
+The reason is that parameters are *local* to the function where they are defined. They “belong” to that function, and that function only. No other function can access those symbols or interfere with them. This is a Good Thing™, because you can give your parameters any names you please with absolute confidence that they will never conflict with the names of parameters in other functions you write or use.
 
 Symbols defined with ``def``, on the other hand, are accessible by any function in the same *namespace* (to be covered in <<xref to come>>), which you may think of as “all my functions” for now.
 
