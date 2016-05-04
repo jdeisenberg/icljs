@@ -3,7 +3,7 @@
    :trim:
 
 Conditionals
-:::::::::::::::::::::::::::::::
+::::::::::::::::
 
 Consider the following function, which, given a price and quantity, calculates a total cost with a 5% discount:
     
@@ -148,7 +148,84 @@ $6.00 all day on Mondays (day 1 of the week), $7.50 before 3 p.m. and $8.50 afte
 Compound conditions: ``and`` and ``or``
 ========================================
 
-This section intentionally left blank.
+Consider these modifications to the pricing conditions:
+    
+* Price is $4.00 if the person is less than 10 years old **or** 65+ years old.
+* Price is $6.00 if the day is Monday **or** Tuesday **or** Thursday.
+* Price is $7.50 if the hour is after noon **and** before 3 p.m.
 
+To handle these compound conditions, ClojureScript provides the ``and`` and ``or`` functions, with this model:
+    
+.. parsed-literal::
+    
+    (and *condition1* *condition2*)
+    (or *condition1* *condition2*)
+
+The result of ``and`` is ``true`` when *all* the conditions evaluate to ``true`` (think “**both** condition1 **and** condition2”). The result of ``or`` is ``true`` when *any* of the conditions evaluate to ``true`` (think “**either** condition1 **or** condition2”). You may test more than two conditions with ``and``/``or``.
+
+Try calling the following ``ticket-price`` function with various ages, days, and hours to see the compound conditions in action. In this code, Monday is day 1 and Sunday is day 7.
+
+.. activecode:: tickets2
+    :caption: Compound Conditions
+    :language: clojurescript
+    
+    (defn ticket-price [age day hour]
+      (cond
+        (or (< age 10) (>= age 65)) 4.00
+        (or (= day 1) (= day 2) (= day 4)) 6.00
+        (and (>= hour 12) (<= hour 14)) 7.50
+        :else 8.50))
+    
+    (ticket-price 20 1 16)
+
+
+.. reveal:: nonprogrammer_sym
+    :showtitle: Click to read about “early exit”
+    :hidetitle: Hide
+    
+    When evaluating ``and``/``or``, the conditions are evaluated from left to right. ClojureScript will stop evaluating expressions as soon as it knows for sure what the final result has to be.  For example, with ``and``, since *all* the conditions have to be true, as soon as a condition comes back ``false``, there’s no need to look at the other conditions. Similarly, with ``or``, since the whole expression is true if ``any`` condition is true, ClojureScript can stop testing conditions as soon as it finds a ``true`` condition. The name for this behavior is “early exit.”
+    
+    When would you use this? Here’s a scenario: you are given a number of items and the total price for all the items, and you want to know if the average price is more than $7.00.  You can write a compound condition like this:
+        
+    ::
+        
+        (and (> n 0) (> (/ total-price n) 7))
+        
+    What happens if ``n`` is zero? Without early exit, you’d be in trouble. ClojureScript would evaluate both conditions and try to divide by zero when evaluating the second condition. However, with early exit, because ``n`` (zero) is not greater than zero, the first condition comes back ``false``, and ClojureScript can stop |---| the whole result has to be ``false``, and the division by ``n`` never happens.
+    
+The ``not`` function
+---------------------
+
+Rounding out the boolean functions is ``not``, used in this model:
+    
+.. parsed-literal::
+    
+    (not *condition*)
+
+When the *condition* is ``true``, ``not`` changes it to ``false``; when the *condition* is  ``false``, ``not`` changes it to ``true``. So, if I wanted an expression to be true for anyone who is *not* between the ages of 18 **and** 21, I could write:
+
+::
+    
+    (not (and (>= age 18) (<= age 21)))
+    
+I could also write it this way:
+    
+::
+    
+    (or (< age 18) (> age 21))
+    
+but the first way expresses the logic more closely to the way we think and talk about the condition.
+
+.. reveal:: demorgan
+    :showtitle: Click to find out about the DeMorgan Laws
+    :hidetitle: Hide
+    
+    You may have noticed that when I got rid of the ``not``, the ``and`` changed to an ``or``, and the conditions switched from ``>=`` and ``<=`` to their opposites. This is an application of the *DeMorgan Laws*, which tell you how to convert compound expressions with ``not``:
+        
+    .. parsed-literal::
+        
+        (not (and *a* *b*)) → (or (not *a*) (not *b*))
+        (not (or *a* *b*)) → (and (not *a*) (not *b*))
+    
 
 .. [1] ``if`` is technically not a function. In truth ``if``, ``def``, ``let`` (and others) are classified as *special forms*. ``defn`` is also not a function; it is a *macro*. At this stage, these are distinctions without a difference, but they will become important if you go in depth with ClojureScript. The only reason this footnote is here is so that outraged language purists won’t bombard me with emails about my obvious misclassification of ``if``.
