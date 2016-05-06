@@ -22,13 +22,13 @@ Table of Contents
    js_interact1
    conditionals
    strings
+   web_pages
+   appendix_a
+   appendix_b
 
 List of sections to be written; order and number of topics may change. (YMMV)
 
-* Interlude: What Programming is About
-* Strings
-* Accessing HTML Forms
-    * Impure functions
+* What Programming is About
 * Collections
     * Lists / Vectors
         * Constructing and accessing
@@ -39,7 +39,6 @@ List of sections to be written; order and number of topics may change. (YMMV)
     * Destructuring
     * Sets
 * Regular Expressions
-* Appendix A: Basics of HTML
-* Appendix B: Creating a ClojureScript project
+
 
         

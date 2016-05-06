@@ -228,5 +228,134 @@ but the first way expresses the logic more closely to the way we think and talk 
         (not (or *a* *b*)) → (and (not *a*) (not *b*))
     
     Use these conversions when you need to write a compound condition in a way that corresponds to the logic of the transformation you are doing.
+    
+    Here is a video about the DeMorgan laws; it was originally designed for a course in the Ruby programming language, but the principle applies.
+    
+    .. youtube:: Wrr_k_5QI-g
+        :height: 315
+        :width: 560
+        :align: center
+
+
+Exercises
+----------
+      
+.. container:: full_width
+
+    .. tabbed:: pay_rate
+
+        .. tab:: Your Program
+
+            Write a function named ``calculate-pay`` that calculates a person’s total weekly pay, given the hourly pay rate and number of hours worked per week. If a person
+            works more than 40 hours, they get “time and a half”; that is, 1.5 times the normal pay rate for the hours above 40.
+       
+            .. activecode:: pay_q
+                :language: clojurescript
+                
+                ; your code here
+                (calculate-pay 30 17.50) ; should be 525
+                ; (calculate-pay 45 20) ; should be 950
+
+                
+        .. tab:: Answer
+            
+            .. activecode:: pay_answer
+                :language: clojurescript
+                
+                (defn calculate-pay [hours rate]
+                    (if (> hours 40)
+                      (+ (* 40 rate) (* (- hours 40) (* rate 1.5)))
+                      (* hours rate)))
+               
+                (calculate-pay 30 17.50)
+
+.. container:: full_width
+
+    .. tabbed:: valid_triangle
+
+        .. tab:: Your Program
+
+            Write a function named ``valid-triangle`` that takes the lengths of the three sides of a triangle and returns ``true`` if a triangle with those sides could exist, ``false`` otherwise. A triangle is valid if the sum of any two sides is greater than the length of the remaining side. Thus, a triangle with sides of length 3, 4, and 5 is valid because 3 + 4 is greater than 5, 3 + 5 is greater than 4, and 4 + 5 is greater than 3.  A triangle with sides 2, 7, and 11 is impossible because 2 + 7 is less than 11.
+               
+            .. activecode:: triangle_q
+                :language: clojurescript
+                
+                ; your code here
+                (valid-triangle 3 4 5) ; should be true
+                ; (valid-triangle 2 7 11) ; should be false
+
+                
+        .. tab:: Answer 1
+            
+            This function does the job, but it can be improved. See the next tab
+            for a better version.
+            
+            .. activecode:: triangle_answer1
+                :language: clojurescript
+                
+                (defn valid-triangle [a b c]
+                    (if (and (> (+ a b) c) (> (+ a c) b) (> (+ b c) a))
+                      true
+                      false))
+               
+                (valid-triangle 3 4 5)
+
+        .. tab:: Answer 2 (better)
+            
+            The ``(and...``) expression already gives you a value of ``true`` or ``false``, depending on the
+            arguments. There is no reason to use ``if`` to return the value; just evaluate the expression and
+            use that as the function value.
+            
+            .. activecode:: triangle_answer2
+                :language: clojurescript
+                
+                (defn valid-triangle [a b c]
+                    (and (> (+ a b) c) (> (+ a c) b) (> (+ b c) a)))
+               
+                (valid-triangle 3 4 5)
+
+.. container:: full_width
+
+    .. tabbed:: marginal_tax
+
+        .. tab:: Your Program
+
+            Write a function named ``calculate-tax`` that takes a person’s annual income as its single argument and returns that amount of tax the person must pay.
+            Use ``cond`` in your solution. Tax is calculated according to the following table:
+                
+            +-----------+-------------------------------------+
+            |  Income   | Tax                                 |
+            +===========+=====================================+
+            | <= 10000  |  0                                  |
+            +-----------+-------------------------------------+
+            | <= 30000  |  5% of amount over 10000            |
+            +-----------+-------------------------------------+
+            | <= 70000  |  1000 + 15% of amount over 30000    |
+            +-----------+-------------------------------------+
+            | <= 150000 |  7000 + 30% of amount over 70000    |
+            +-----------+-------------------------------------+
+            | > 150000  |  31000 + 40% of amount over 150000  |
+            +-----------+-------------------------------------+
+               
+            .. activecode:: tax_q
+                :language: clojurescript
+                
+                ; your code here
+                (calculate-tax 100000) ; should be 16000
+
+                
+        .. tab:: Answer
+            
+            .. activecode:: tax_answer
+                :language: clojurescript
+                
+                (defn calculate-tax [amount]
+                  (cond
+                    (<= amount 30000) 0
+                    (<= amount 70000) (+ 1000 (* 0.15 (- amount 30000)))
+                    (<= amount 150000) (+ 7000 (* 0.30 (- amount 70000)))
+                    :else (+ 31000 (* 0.40 (- amount 150000)))))
+               
+                (calculate-tax 100000)
 
 .. [1] ``if`` is technically not a function. In truth ``if``, ``def``, ``let`` (and others) are classified as *special forms*. ``defn`` is also not a function; it is a *macro*. At this stage, these are distinctions without a difference, but they will become important if you go in depth with ClojureScript. The only reason this footnote is here is so that outraged language purists won’t bombard me with emails about my obvious misclassification of ``if``.
