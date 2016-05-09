@@ -84,7 +84,7 @@ previously bound symbols:
 Defining Functions
 ==================
 
-You define functions with ``defn``. The general form for a function is:
+You define functions with ``defn``. The general form for defining a function is:
     
 .. parsed-literal::
     

@@ -84,7 +84,7 @@ Type the preceding function calls (one at a time) in the following activecode ar
 Converting Strings to Numbers
 ===============================
 
-As you will see in the section about :doc:`accessing HTML forms </html_forms>`, when you get information from the person using your program, it will always be in the form of a string. Let’s say your web page asks for a person’s age. When they type ``56``, what you will get is the *string* ``"56"``, and you have to convert it to numeric form.
+As you will see in the section about :doc:`accessing web pages </web_pages>`, when you get information from the person using your program, it will always be in the form of a string. Let’s say your web page asks for a person’s age. When they type ``56``, what you will get is the *string* ``"56"``, and you have to convert it to numeric form.
     
 You do this by using JavaScript’s ``parseInt`` function for integers, or with ``parseFloat`` for numbers with decimals.  Here’s how you use such functions:
     

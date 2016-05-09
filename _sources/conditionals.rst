@@ -158,8 +158,8 @@ To handle these compound conditions, ClojureScript provides the ``and`` and ``or
     
 .. parsed-literal::
     
-    (and *condition1* *condition2*)
-    (or *condition1* *condition2*)
+    (and *condition1* *condition2*\ )
+    (or *condition1* *condition2*\ )
 
 The result of ``and`` is ``true`` when *all* the conditions evaluate to ``true`` (think “**both** condition1 **and** condition2”). The result of ``or`` is ``true`` when *any* of the conditions evaluate to ``true`` (think “**either** condition1 **or** condition2”). You may test more than two conditions with ``and``/``or``.
 

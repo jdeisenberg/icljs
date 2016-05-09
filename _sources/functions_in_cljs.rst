@@ -29,7 +29,7 @@ If you want to add 3 and 5 in ClojureScript, you write the following *expression
     
 In keeping with the philosophy of this book, you didn’t merely add 3 and 5, you transformed the numbers 3 and 5 into 8 by applying the add function to them. OK, so how would you write an expression that applies the multiply function to the numbers 8 and 9 to get their product? Or, in more ordinary terminology, write an expression that uses the ``*`` function to multiply 8 by 9.
 Try it in the active code box below. (Note: the line beginning with ``;`` is a *comment*. Comments are for us humans to read; the computer ignores the semicolon and everything
-else on that line.)
+that follows it on that line.)
 
 .. container:: full_width
 

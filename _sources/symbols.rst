@@ -29,7 +29,8 @@ Symbols in ClojureScript
 
 Symbols in ClojureScript work much as they do in algebra. You use the ``def`` function to **bind** a symbol to a value. 
 The ``def`` function takes two arguments: the symbol and the value. Once a symbol is bound,
-you can use it in expressions, including definitions of other symbols. The value can be an expression as well:
+you can use it in expressions, including definitions of other symbols. The value can be an expression as well. In the following
+code, the ``println`` function (the name stands for “print line”) is used to display the value bound to ``days``.
 
 .. activecode:: symbol_def
     :caption: Define Symbol Bindings Here
@@ -37,7 +38,7 @@ you can use it in expressions, including definitions of other symbols. The value
     
     (def years 62)
     (def days (* 365 years))
-    days
+    (println days)
 
 .. reveal:: nonprogrammer_sym
     :showtitle: Click to read this if you have not programmed before
@@ -84,35 +85,26 @@ Again, in terms of meaningfulness, a name like ``ir`` would be far too short, an
     :showtitle: See extra info
     :hidetitle: Hide extra info
 
-    ClojureScript’s rules for symbols give you a great deal of power.
-    You can abuse that power by writing confusing code like this:
-        
-    .. activecode:: symbol_def2
-        :caption: How to Ruin Your Life
-        :language: clojurescript
-        
-        (def def 2)
-        (def + 3)
-        (def - 4)
-        (* def (/ + -))
-
-    Or you can use that power wisely. For example, by “letter,” ClojureScript doesn’t just mean A through Z;
-    you can use alphabetic characters in any language. Here’s
+    ClojureScript doesn’t just mean A through Z when it talks about a
+    “letter”; you can use alphabetic characters in any language supported
+    by `Unicode`_. Here’s
     the first example with the names in Russian:
 
+    .. _Unicode: http://unicode.org/
+    
     .. activecode:: symbol_def3
         :caption: Letters aren’t just A-Z
         :language: clojurescript
         
         (def лет 62)
         (def дней (* лет 365))
-        дней
+        (println дней)
         
 
 You Try It
 ----------
 
-Give this a try: define a symbol named ``hours`` and another named ``minutes``. Bind them to any values you like. Then define a third symbol named ``total-minutes`` that is bound to 60 times ``hours``, plus ``minutes``.
+Give this a try: define a symbol named ``hours`` and another named ``minutes``. Bind them to any values you like. Then define a third symbol named ``total-minutes`` that is bound to 60 times ``hours``, plus ``minutes``, and use the ``println`` function to display the result.
 
 .. container:: full_width
 
@@ -135,4 +127,4 @@ Give this a try: define a symbol named ``hours`` and another named ``minutes``. 
                 (def hours 3)
                 (def minutes 54)
                 (def total-minutes (+ (* hours 60) minutes))
-                total-minutes
+                (println total-minutes)
