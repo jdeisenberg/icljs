@@ -22,8 +22,10 @@ Normally, a web page lives in a file in the form of an HTMl document. The struct
 An HTML document contains:
     
 * a ``<!DOCTYPE html>`` directive to identify the document as HTML5 (HTML version 5)
-* a ``<head>`` element that identifies the document title and other information about the document as a whole
-* a ``<body>`` element that contains the document content
+* a ``<html>`` element that starts your web page. Inside this element will be:
+    
+  * a ``<head>`` element that identifies the document title and other information about the document as a whole, and
+  * a ``<body>`` element that contains the document content
 
 (There is no equivalent of a business letter’s closing.)
 
@@ -85,6 +87,37 @@ While you can write these elements this way: ``<br></br>``, ``<img></img>``, and
 
 You can think of the ``<.../>`` as meaning “this is an opening and closing tag all wrapped up in one.”
 
+Nesting Elements
+------------------
+
+It is possible to have elements within elements.  The following example shows an ``<em>`` (emphasized text, usually shown in italics) inside a
+``<strong>`` (strongly emphasized, bold) element inside a ``<p>`` (paragraph).
+
+.. activecode:: nesting
+    :language: html
+    :autorun:
+    
+    <p>
+    This paragraph has
+    <strong>very <em>important</em> text</strong>
+    within it.
+    </p>
+
+When you nest elements, the inner element must be completely within the outer element. The following elements are not nested properly, because
+the outer ``<strong>`` element ends before the inner ``<em>`` does.
+    
+::
+    
+    <strong>opening <em> and closing tags </strong> "cross over" one another</em>
+
+Although browsers will display incorrectly nested elements (and they even have a standard for how to handle them), it is considered bad form to write it wrong.
+
+
+Block vs. Inline Elements
+---------------------------
+
+Some elements, like ``<p>``, begin a new line. These are referred to as *block elements*.  Others, like ``<strong>`` and ``<img/>``, do not begin a new line, and are called *inline elements*. This has been a public service announcement for your information; in case you see these terms, now you will know what they mean.
+
 Attributes
 ============
 That ``<img/>`` element is woefully incomplete. It tells the browser to display an image |---| but which image? From what file? What size? What alternate text (for screen readers used by visually impaired people)?  You use *attributes* to specify this extra information.  Here is a more complete ``<img/>`` element:
@@ -109,7 +142,7 @@ While you can sometimes leave off quote marks on an attribute value, it’s not 
 The ``id`` Attribute
 ------------------------
 
-When you are using ClojureScript to manipulate a web page, you will usually use the ``getElementById`` function to access an HTML element by its ``id`` attribute. The value of an ``id`` cannot contain spaces, but may contain any other character. To interact better with CSS (see following), you would be well advised to use only letters, digits, underscores, and hyphens for your ``id``\ s.
+When you are using ClojureScript to manipulate a web page, you will usually use the ``getElementById`` function to access an HTML element by its ``id`` attribute. The value of an ``id`` cannot contain spaces, but may contain any other character. To interact better with CSS (see :doc:`Appendix B </appendix_b>`), you would be well advised to use only letters, digits, underscores, and hyphens for your ``id``\ s.
 
 Summary
 ---------
@@ -119,5 +152,30 @@ Here is a diagram that summarizes the terminology for elements and attrbutes.
 .. image:: images/terminology.png
     :alt: HTML element with attribute, parts labeled as in preceding text
 
+Common Elements
+=================
 
+Here are some of the more commonly used elements:
+
+* ``<p>``: paragraph
+* ``<div>``: “division” (logical section) of the document; this is a block element.
+* ``<ul>``: unordered (bulleted) list
+* ``<ol>``: ordered (numbered or lettered) list
+* ``<li>``: list item (appears within an unordered or ordered list)
+* ``<br/>``: line break
+* ``<input/>``: user input. Attributes tell you whether the input area is:
+    
+  * ``type="text"`` one-line text area
+  * ``type="radio"``: radio button
+  * ``type="checkbox"``: check box
+  * ``type="button"``: labeled button
+
+* ``<h1>``, ``<h2>``...\ ``<h6>``: headings; ``<h1>`` is a level one head; ``<h6>`` is level six. The smaller the level number, the larger the size.
+* ``<img/>``: image
+* ``<em>``: emphasized text; usually displays as italic
+* ``<strong>``: strongly emphasized text; usually displays as bold
+* ``<a>``: anchor; used for links with the ``href`` attribute
+* ``<pre>``: “preformatted” text; block element usually used for multi-line code samples
+* ``<code>``: inline element used for code samples
+* ``<span>``: inline element used to mark a part of content; usually used with styles
 

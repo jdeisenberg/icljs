@@ -25,19 +25,25 @@ Table of Contents
    web_pages
    appendix_a
    appendix_b
+   appendix_c
 
 List of sections to be written; order and number of topics may change. (YMMV)
 
 * What Programming is About
 * Collections
-    * Lists / Vectors
-        * Constructing and accessing
+
+  * Lists / Vectors
+
+    * Constructing and accessing
     * Higher Order Functions
-        * ``map``
-        * ``reduce``
-    * Maps
-    * Destructuring
-    * Sets
+    
+      * ``map``
+      * ``reduce``
+ 
+  * Maps
+  * Destructuring
+  * Sets
+
 * Regular Expressions
 
 

@@ -102,5 +102,3 @@ You can create local bindings within a function with the ``let`` construct:
         (*expression*))
       
 The value of the last expression in the function is the value that the function yields.
-
-
