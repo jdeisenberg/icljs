@@ -23,6 +23,7 @@ Table of Contents
    conditionals
    strings
    web_pages
+   pure_impure
    appendix_a
    appendix_b
    appendix_c
