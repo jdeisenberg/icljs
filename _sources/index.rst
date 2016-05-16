@@ -26,6 +26,7 @@ Table of Contents
    pure_impure
    what_is_programming
    collections
+   lists
    appendix_a
    appendix_b
    appendix_c

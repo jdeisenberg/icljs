@@ -50,8 +50,29 @@ expression like ``(println "It works")`` returns a value of ``nil``.)
 In short: pure functions provide the same output for the same input, never alter any values outside their walls, and
 have no side effects. Impure functions don’t.
 
-Any program you write will have both kinds of functions. In general, the best approach is to separate the impure parts of your
-programs (the input and output) from the processing of the data, which is usually pure.
+Immutability
+=============
+
+Going hand in hand with pure functions is the concept of *immutability*; once a symbol is bound to a value, that value does not
+change. For example, in algebra, when you say *x* = 5 and then  *y* = *x*\ :sup:2\ the 5 is transformed to a new value, but
+the number 5 itself does not change, and *x* still stands for 5.
+
+Similarly, in ClojureScript, functions generally do not modify their arguments (but see the following section for exceptions).
+This means you can call functions with the confidence that they will not stomp all over your carefully constructed bindings.
+
+In the doc:`example of accessing web page data </web_pages>`, you can see the `(set!)` function, which changes the value that
+is bound to the ``.-innerHTML`` property of a paragraph on the web page. The exclamation point is a convention in ClojureScript
+that warns you that the function is impure and modifies its arguments.
+
+Dealing with Impurity
+======================
+
+At some point, you will have to deal with the outside world, and you may have to interact with JavaScript, which does
+not have strict ideas of function purity and immutability. This means that any program you write will have to have
+impure functions and change the state of JavaScript *variables* (named memory locations). In general, the best approach
+is to separate the impure parts of your programs (the input and output) from the processing of the data, which is usually pure.
+Confine them to their own functions, clearly labeled as such, and your job of updating and maintaining your programs will be
+easier.
 
 
 

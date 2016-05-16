@@ -29,7 +29,7 @@ The main types of collections in Clojurescript are:
 
   ``(def age-vector [22 43 19 37 28])``
   
-* **map**: a collection that lets you associate unique keys with values, intended to be accessed by key; in other programming languages this is aptly called a “dictionary.” In a dictionary, a word (the key) is associated with its definition (a value), and you look things up by word.
+* **map**: a collection that lets you associate unique keys with values, intended to be accessed by key; in other programming languages this is aptly called a “dictionary.” In a dictionary, a word (the key) is associated with its definition (a value), and you look things up by word. Unlike a dictionary, the keys of a map are not stored in any particular order.
 
   ``(def age-map {"Nancy" 22, "Fernando"  43, "Loc" 19, "Jeanne" 37, "Joe" 28})``
   
