@@ -16,7 +16,7 @@ If you are wondering why this book isn’t called *Programming with ClojureScrip
 Transforming Data
 -----------------
 
-Consider this list of minimum and maximum temperatures over a seven-day period in February, 2016 in Tokyo, Japan:  (3 9, 2 13, 4 10, 4 9, 4 12, 9 20, 16 21). You could transform this to find:
+Consider this list of minimum and maximum temperatures over a seven-day period in February, 2016 in Tokyo, Japan:  [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]]. You could transform this to find:
     
 * The week |rs| s minimum and maximum temperatures: 2 |o| C and 21 |o| C
 * The average minimum and maximum temperatures:  13.43 |o| C and 6 |o| C
@@ -24,7 +24,8 @@ Consider this list of minimum and maximum temperatures over a seven-day period i
 
 You might even transform the data to a set of *x* and *y* coordinates to create a graph:
     
-*graphic will go here as soon as I write the code for it*
+.. image:: images/temperature_graph.png
+    :alt: Line graph showing max temperature as red line and min temperature as blue line
 
 If you think about it, most of what computers do is transformation of data. When you
 make an online purchase, the quantity, price, and customer information gets transformed into a record

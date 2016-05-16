@@ -72,7 +72,7 @@ That code has to be activated whenever the button gets clicked. Here is code tha
     
 There’s a lot here, so let’s get started. First, ignore everything to the right of the ClojureScript code. That’s what the ClojureScript looks like after it has been translated to JavaScript. If you know JavaScript it may be interesting to you. For now, concentrate on the ClojureScript at the left.
 
-The first three ``def``s bind the input text field, the button, and the result paragraph to symbols; these are for ease of reading in the rest of the code.
+The first three ``def``\ s bind the input text field, the button, and the result paragraph to symbols; these are for ease of reading in the rest of the code.
 
 The ``calculate`` function is an *event handler*. Event handlers have one parameter: the JavaScript event object that caused the function to be called. In this instance, the code doesn’t need any of the event information. (Sometimes this information is useful; for example, a mouse click event carries properties telling where you clicked on the screen, which mouse button was pressed, etc.)
 

@@ -39,8 +39,8 @@ If you want the value that the user has typed into an ``<input type="text" id="p
     
 This is not a pure function; the result is not going to be the same every tme you make the call; in fact,
 it will almost *never* be the same, as it depends on the user’s input. Other examples of impure functions are
-functions that generate random numbers or get the current time of day. You *never* want them to return the same
-value for the same input!
+functions that generate random numbers or get the current day and time. You certainly do not want these to
+return the same value every time you call them!
 
 Similarly, output is not pure, in the sense that there is no real “return value” from the ``(println ...)`` function that
 was used in the :doc:`explanation of symbols </symbols>`. Unlike ``(average)``, it doesn’t give back a value you can

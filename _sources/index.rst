@@ -24,13 +24,14 @@ Table of Contents
    strings
    web_pages
    pure_impure
+   what_is_programming
+   collections
    appendix_a
    appendix_b
    appendix_c
 
 List of sections to be written; order and number of topics may change. (YMMV)
 
-* What Programming is About
 * Collections
 
   * Lists / Vectors
