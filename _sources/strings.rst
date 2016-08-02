@@ -35,7 +35,7 @@ Try typing each of these as the definition of ``message`` in the following activ
     :language: clojurescript
     
     (def message "This is a string.")
-    message
+    (println message)
     
 Combining Strings
 ==================

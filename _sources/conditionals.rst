@@ -38,7 +38,7 @@ The expression ``(< qty 50)`` tests to see if ``qty`` is less than 50. If so, th
     If you simply enter an ``if`` expression such as the preceding one into an active code area, you will not see any result. This is due to the way that
     ClojureScript in the browser works. It will do the right thing when used in a program.
     
-Let’s see how this works in a program. I have moved the code for calculating the discount into its own function because calculating the discount is really its own separate task. How you figure out what the discount is doesn’t change the formula that uses that amount. Try changing the quantity and see how that affects the total cost.
+Let’s see how this works in a program. I have moved the code for calculating the discount into its own function because calculating the discount is really its own separate task. How you figure out what the discount is doesn’t change the formula that uses that amount. Try changing the quantity (the ``30`` in the last line) and see how that affects the total cost.
 
 .. activecode:: discount1
     :caption: Simple Discount

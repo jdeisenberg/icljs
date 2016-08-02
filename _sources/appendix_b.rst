@@ -111,7 +111,7 @@ CSS has two ways to measure length: in absolute and relative terms. Absolute uni
     than 96 pixels per inch, the displayed length will be less than one inch. According to the `Mozilla Developer Network page`_, “for printers and very
     high resolution screens one CSS pixel implies multiple device pixels, so that the number of pixel per inch stays around 96.”
     
-.. _ Mozilla Developer Network page: https://developer.mozilla.org/en-US/docs/Web/CSS/length
+.. _Mozilla Developer Network page: https://developer.mozilla.org/en-US/docs/Web/CSS/length
 
 There are also relative units, where the length is relative to the current size established by an element’s parent.  The most common relative units are:
     

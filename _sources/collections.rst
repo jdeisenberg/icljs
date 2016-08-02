@@ -37,15 +37,3 @@ The main types of collections in Clojurescript are:
 
   ``(def age-set #{22 43 19 37 28})``
   
-One important aspect of all ClojureScript collections is that they are *persistent*. All the functions that ClojureScript provides to manipulate collections return a new version of the collection.
-
-Again, a concrete example: the ``conj``  function adds a new element to a collection; when used with a list, it adds a new element at the beginning of the list:
-    
-.. activecode:: list-conj
-    :language: clojurescript
-
-    (def age-list (list 22 43 19 37 28))
-    (println (conj age-list 27))
-    (println age-list)
-
-The first ``println`` adds 27 to the list and prints it, but the original list is untouched, as shown by the second ``println``.

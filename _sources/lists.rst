@@ -23,7 +23,7 @@ do you get a list that doesn’t have a function as its first element?
 * Method 1: use the ``list`` function.  ``(list 22 43 19 37 28)`` produces exactly the desired result, and it follows the rule, because the first item in the parentheses is a function name.
 * Method 2: precede the list of items with a single quote ``'``, which tells ClojureScript to interpret what follows literally, without trying to evaluate it. Thus, you could use             ``'(22 43 19 37 28)``
 
-In the case where you have just a list of simple values, there is no difference between the methods. However, if you have sub-expressions or symbols, there is a difference, as you can see in this code:
+In the case where you have a list of simple values, there is no difference between the methods. However, if you have sub-expressions or symbols, there is a difference, as you can see in this code:
     
 .. activecode:: list-differences
     :language: clojurescript
@@ -34,7 +34,7 @@ In the case where you have just a list of simple values, there is no difference 
     (println list1)
     (println list2)
     
-The first list, ``list1``, evaluates all of its elements. The second one takes them literally as given, without evaluation. At this stage, you will probably want the first method. The second method is useful when you are writing *macros*, which, as of this writing, is beyond the scope of this book.
+The first list, ``list1``, evaluates all of its elements. The second list, ``list2``, takes them literally as given, without evaluation. At this stage, you will probably want the first method. The second method is useful when you are writing *macros*, which, as of this writing, is beyond the scope of this book.
 
 Fundamental Operations
 ==========================
@@ -49,21 +49,20 @@ The following functions, which work on all collections, not just lists, are the 
 * ``conj`` takes a collection and an item, and adds that item to the collection.
 
 In the case of lists, ``conj`` adds the new element at the beginning of the list.  Try these expressions in the following active code box, or use a series
-of ``println`` to do them all at once; for your convenience, the ``ages`` list has been defined.
+of ``println`` to do them all at once; for your convenience, the ``age-list`` list has been defined.
 
 ::
     
-    (first ages)
-    (rest ages)
-    (count ages)
-    (list? ages)
-    (conj ages 55)
+    (first age-list)
+    (rest age-list)
+    (count age-list)
+    (list? age-list)
+    (conj age-list 55)
     
-.. activecode:: try_lists
+.. activecode:: try-lists
     :language: clojurescript
     
-    (def ages (list 22 43 19 37 28))
-    
+    (def age-list (list 22 43 19 37 28))
 
 One important aspect of all ClojureScript collections is that they are *persistent*. All the functions that ClojureScript provides to manipulate collections return a new version of the collection.
 

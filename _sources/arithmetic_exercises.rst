@@ -1,4 +1,5 @@
 ..  Copyright © J David Eisenberg
+
 Exercises in Arithmetic
 :::::::::::::::::::::::::::::
 

@@ -54,7 +54,7 @@ Immutability
 =============
 
 Going hand in hand with pure functions is the concept of *immutability*; once a symbol is bound to a value, that value does not
-change. For example, in algebra, when you say *x* = 5 and then  *y* = *x*\ :sup:2\ the 5 is transformed to a new value, but
+change. For example, in algebra, when you say *x* = 5 and then  *y* = *x* + 3, the 5 is transformed to a new value, but
 the number 5 itself does not change, and *x* still stands for 5.
 
 Similarly, in ClojureScript, functions generally do not modify their arguments (but see the following section for exceptions).

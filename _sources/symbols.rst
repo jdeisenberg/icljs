@@ -21,7 +21,7 @@ Another feature of algebraic symbols is that, once you set them, you can’t cha
     
     *x* = 6
     
-because you said that *x* symbolizes 5, and five certainly does not equal six!
+because you said that *x* stands for 5, and five certainly does not equal six!
 
 
 Symbols in ClojureScript

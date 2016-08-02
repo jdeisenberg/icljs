@@ -35,11 +35,10 @@ The Process of Programming
 
 Usually, writing a program consists of these steps:
    
-1. Figure out what problem you want to solve. No, I’m not kidding. You have no idea how many people start writing a program
-without really knowing what they want the computer to do.
+1. Figure out what problem you want to solve. No, I’m not kidding. You have no idea how many people start writing a program without really knowing what they want the computer to do.
 
 2. Plan a solution. This should be the part you spend the most time on. This will involve at least figuring out
-    
+
    * How you want to represent your data
    * What functions you need for transforming the data to arrive at your solution
 
@@ -47,7 +46,7 @@ without really knowing what they want the computer to do.
    I realize there is a great temptation to get a half-formed idea of a solution in your head and then
    run to the keyboard and start pounding away. Resist this temptation; such an approach is a waste of time.
    The functional programming style richly rewards pre-planning.
-    
+
    Realize, however, that your initial design does not have to be your final design. Your planning is not
    engraved in stone; it is engraved in Jell-O®.
 
@@ -71,13 +70,13 @@ program, or one that was just good enough to show some interesting constructs of
 sufficient.
 
 Then came the planning stage. I realized that I would have to translate from cartesian coordinates (the *x* and *y* coordinates you need for a graph like you would
-make in an algebra class) and the screen coordinates where the drawing would take lace. My first “plan” was a hasty sketch and a couple of notes, as shown in the following image.
+make in an algebra class) and the screen coordinates where the drawing would take place. My first “plan” was a hasty sketch and a couple of notes, as shown in the following image.
 
 .. image:: images/bad_plan.jpg
     :alt: Paper with a rectangle and three scrawled notes
     
-“OK,” I thought, “I got this.” After fumbling around for twenty minutes and writing some code so dreadful that I won’t show it here, lest it give you any bad habits.
-“No, I don’t got this,” I concluded. Back to the drawing board, where I drew a diagram **and assigned numbers to the relevant portions**. *Now* I could work on figuring
+“OK,” I thought, “I got this.” After fumbling around for twenty minutes and writing some code so dreadful that I won’t show it here, lest it give you any bad habits, I
+concluded “No, I don’t got this.” Back to the drawing board, where I drew a diagram **and assigned numbers to the relevant portions**. *Now* I could work on figuring
 out the proper formulas, and here is what I came up with:
 
 .. image:: images/good_plan.jpg

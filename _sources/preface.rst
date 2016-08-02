@@ -18,7 +18,7 @@ Transforming Data
 
 Consider this list of minimum and maximum temperatures over a seven-day period in February, 2016 in Tokyo, Japan:  [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]]. You could transform this to find:
     
-* The week |rs| s minimum and maximum temperatures: 2 |o| C and 21 |o| C
+* The week’s minimum and maximum temperatures: 2 |o| C and 21 |o| C
 * The average minimum and maximum temperatures:  13.43 |o| C and 6 |o| C
 * The standard deviations: 5.06 and 4.93
 
@@ -64,10 +64,11 @@ Who Should Not Read This Book
 =============================
 
 If you are an experienced programmer in functional languages, you will probably find little that is new or exciting here. If your purpose is to learn
-ClojureScript, you would do well to look at `ClojureScript Unraveled`_.
+ClojureScript, you would do well to look at `ClojureScript Unraveled`_. (Although, if you want to read the book to make comments and/or improvements, please do!)
 
 .. _ClojureScript Unraveled: https://funcool.github.io/clojurescript-unraveled/
-(Although, if you want to read the book to make comments and/or improvements, please do!) 
+
+
 
 Pacing of the Book
 ==================
