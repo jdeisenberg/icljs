@@ -116,3 +116,6 @@ with ``clojure.string/``. Here are some of the Clojure string functions, many of
 * ``(clojure.string/upper-case string)`` returns a new string that is the *string* with letters converted to upper case.
 * ``(clojure.string/replace-first string oldpart newpart)`` returns a new string with first occurrence of *oldpart* replaced by *newpart*
 * ``(clojure.string/replace string oldpart newpart)`` returns a new string with all occurrences of *oldpart* replaced by *newpart*
+
+The ``clojure.string`` library doesn’t work in the activecode environment, so this book will stick to the JavaScript string manipulation functions. When you write your own ClojureScript programs, I strongly advise you to use the ``clojure.string`` library instead.
+

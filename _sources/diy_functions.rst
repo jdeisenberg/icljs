@@ -13,16 +13,16 @@ The Parts of a Function
 Let’s start with implementing an ``average`` function that takes two arguments and yields their average as a result. Here’s the definition:
     
 ::
-    
-    (defn average [a b]
-      (/ (+ a b) 2.0))
+
+    (def average (fn [a b]
+        (/ (+ a b) 2.0)))
 
 Analyzing this step by step:
     
-* ``defn`` is the name of a function that defines functions
-* The first argument to ``defn`` is the function name: ``average``
-* The next argument is a *vector* of parameter names. A vector is a sequence of items in square brackets. (You will learn more about vectors in *link goes here*.) This function needs two inputs, so there are two items in the vector. In this case, they have generic names: ``a`` and ``b``.
-* The last argument to ``defn`` is the *function body.* In this case, it consists of one expression: ``(/ (+ a b) 2.0)``. The last expression in the function body is the function’s result.
+* ``def average`` says that you want to bind the symbol ``average`` to some value.
+* That value is the special form ``(fn ...)``, which means “function”.
+* The first argument to ``fn`` is a *vector* of parameter names. A vector is a sequence of items in square brackets. (You will learn more about vectors in :doc:`an upcoming chapter <vectors>`.) The function you’re defining needs two inputs, so there are two items in the vector. In this case, they have generic names: ``a`` and ``b``.
+* The second argument to ``fn`` is the *function body.* In this case, it consists of one nested expression: ``(/ (+ a b) 2.0)``. The value of the last expression in the function body is the function’s result.
 
 Once a function is defined, you can call it just like any other ClojureScript function; you give its name after an opening parenthesis, follow it by the arguments you want to transform, and close the parentheses.
 
@@ -30,8 +30,8 @@ Once a function is defined, you can call it just like any other ClojureScript fu
     :caption: The average function
     :language: clojurescript
     
-    (defn average [a b]
-      (/ (+ a b) 2.0))
+    (def average (fn [a b]
+        (/ (+ a b) 2.0)))
     
     (average 5 17)
 
@@ -60,8 +60,8 @@ Here’s another function with two parameters; it finds the area of an ellipse a
     :caption: Calculate area of ellipse
     :language: clojurescript
     
-    (defn ellipse-area [a b]
-      (* 3.14159265 a b))
+    (def ellipse-area (fn [a b]
+        (* 3.14159265 a b)))
     
     (ellipse-area 3 7)
     
@@ -90,7 +90,30 @@ Now, you try it. Write a function named ``surface-area`` that calculates the sur
             .. activecode:: prism_answer
                 :language: clojurescript
                 
-                (defn surface-area [a b c]
-                    (* 2 (+ (* a b) (* b c) (* a c))))
+                (def surface-area (fn [a b c]
+                    (* 2 (+ (* a b) (* b c) (* a c)))))
                     
                 (surface-area 3 5 7)
+
+
+A Shortcut for Defining Functions
+=================================
+
+Defining functions is such a common operation in ClojureScript that the language provides a shortcut: ``defn``, which combines ``def`` and ``fn``.
+In short, you use ``defn`` instead of ``def`` and drop the opening ``(fn`` and its closing ``)``. As a result, the parameter vector immediately follows the function name.
+As a concrete example, here are the definitions of ``average`` and ``ellipse-area`` in the shortcut form:
+    
+.. activecode:: defn
+    :caption: Using defn to define functions
+    :language: clojurescript
+    
+    (defn average [a b]
+      (/ (+ a b) 2.0))
+    
+    (defn ellipse-area [a b]
+      (* 3.14159265 a b))
+    
+    (println (average 5 17))
+    (println (ellipse-area 5 3))
+
+This book will use the ``defn`` special form for most of its function definitions because it is so convenient. If you are a fan of ``fn``, do not be disappointed; it will make its triumphant return when we discuss :ref:`anonymous functions <anonymous-functions>`.

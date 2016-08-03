@@ -27,26 +27,22 @@ Table of Contents
    what_is_programming
    collections
    lists
+   vectors
+   map_function
    appendix_a
    appendix_b
    appendix_c
 
 List of sections to be written; order and number of topics may change. (YMMV)
 
-* Collections
+* Higher Order Functions
 
-  * Lists / Vectors
-
-    * Constructing and accessing
-    * Higher Order Functions
-    
-      * ``map``
-      * ``reduce``
+    * ``map``
+    * ``reduce``
  
-  * Maps
-  * Destructuring
-  * Sets
-
+* Maps
+* Destructuring
+* Sets
 * Regular Expressions
 
 
