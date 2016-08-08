@@ -2,8 +2,8 @@
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
 
-Interlude: What Programming is About
-::::::::::::::::::::::::::::::::::::::::
+What Programming is About
+:::::::::::::::::::::::::::
 
 Many years ago, I was at a seminar where the leader asked us to describe the essence of
 our jobs. After the first participant had
