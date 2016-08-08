@@ -76,7 +76,7 @@ because you don’t know the average in advance. You *could* use ``def`` to bind
 
 Instead, you can use ``partial``. Before showing you how it is written, here’s the idea behind it. You know how you login to an e-commerce site you’ve used before and you purchase a new item? The checkout form shows up with much of the information already filled in (name, shipping/billing address) and all you need to do is  complete one or two items. In essence, the form is *partially* filled in.
 
-So here’s the trick: we’re going to give ``partial`` the two-parameter function and the first argument. The result will be a partially-called function that is waiting to be called with the second argument, much as the web site send you a partically-completed form that was waiting to be completed with extra information.
+So here’s the trick: we’re going to give ``partial`` the two-parameter function and the first argument. The result will be a partially-called function that is waiting to be called with the second argument, much as the web site sends you a partially-completed form that was waiting to be completed with extra information.
 
 Before doing the whole program, let’s see how you could write a ``partial`` function for filtering averages above 50. I've put the symbols in the expression in ``above-average`` in the same order as the parameters.
     

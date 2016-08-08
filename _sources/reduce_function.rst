@@ -14,7 +14,7 @@ The ``reduce`` function
 
 ``reduce`` is also a higher-order function; it takes a function as one of its arguments and applies that function to each element of the collection to accumulate a result; that is, it “reduces” the collection to a smaller result (in most cases, a single piece of data).
 
-Here is the general form of the ```reduce`` function that we will use:
+Here is the general form of the ``reduce`` function that we will use:
 
 ::
 
