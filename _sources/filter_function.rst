@@ -28,7 +28,7 @@ As an example, here is ``filter`` used to extract only numbers that are multiple
     :language: clojurescript
     
     (defn multiple-of-four? [value]
-        (= (rem value 4) 0)
+        (= (rem value 4) 0))
     
     (filter multiple-of-four? [2 16 -3 -72 128 99] )
 
