@@ -70,6 +70,15 @@ Putting It Together
    prices_app
    prices_app_solution
    
+More Topics
+===========
+
+.. toctree::
+   :maxdepth: 2
+   
+   recursion
+   
+   
 Appendices
 ==========
 
@@ -82,6 +91,7 @@ Appendices
 
 List of sections to be written; order and number of topics may change. (YMMV)
 
+* Recursion
 * Lazy Sequences 
 * Maps
 * Destructuring

@@ -117,7 +117,7 @@ There are also relative units, where the length is relative to the current size 
     
 * ``em`` (the current font size)
 * ``ex`` (the “x-height”; generally the height of lower case letters in the current font)
-* ``\ %`` (percentage of current size)
+* ``%`` (percentage of current size)
 
 Thus, a ``font-size: 2em`` means a font size twice the height of the enclosing element’s font size; you could also say ``font-size: 200%``.
 

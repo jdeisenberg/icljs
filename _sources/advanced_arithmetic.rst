@@ -29,13 +29,13 @@ As you saw from the function box diagram, ``3 + 4 * 5`` means to add 3 to the re
 
 To add 3 to something in ClojureScript, you write:
     
-.. datafile:: infix1.dat
+::
 
     (+ 3 something)
 
 That *something* is the result of multiplying 4 times 5, which you write as ``(* 4 5)``\. Putting it together, you get:
 
-.. datafile:: infix2.dat
+::
 
     (+ 3 (* 4 5))
 
@@ -51,7 +51,7 @@ Here’s another example: ``3 - 2 * 4 / 5``\. Thinking it through in order of op
 
 Keeping in mind that the last shall be first, and the first shall be last, the answer is:
     
-.. datafile:: infix3.dat
+::
 
     (- 3 (/ (* 2 4) 5))
 
@@ -68,7 +68,7 @@ Let’s return to the expression ``3 + 4 * 5``\. Fully parenthesize the expressi
    
 That gives you this result:
     
-.. datafile:: prefix1.dat
+::
 
     (+ 3 (* 4 5))
 
@@ -78,7 +78,7 @@ the first prefix operation.
 Here is the other example: ``3 - 2 * 4 / 5``. Using what you know about order of operations and *fully*
 parenthesizing the expression, you apply these steps:
     
-.. datafile:: prefix2.dat
+::
 
     (3 - ((2 * 4) / 5))     ; fully parenthesize
     (- 3 ((2 * 4) / 5))     ; switch 3 and minus sign

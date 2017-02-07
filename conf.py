@@ -45,7 +45,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Transforming Data with ClojureScript'
-copyright = '2016 J David Eisenberg'
+copyright = '2017 J David Eisenberg'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

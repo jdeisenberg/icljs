@@ -7,7 +7,7 @@
 Functions in ClojureScript
 ::::::::::::::::::::::::::
 
-So, how do you call functions in ClojureScript? There’s a simple, universal rule: Write an open parenthesis, the name of the function, the function’s arguments, and a closing parenthesis.
+So, how do you call functions in ClojureScript? There’s a universal rule: Write an open parenthesis, the name of the function, the function’s arguments, and a closing parenthesis.
 
 Doing Arithmetic with Functions
 ===============================

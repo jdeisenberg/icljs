@@ -11,12 +11,12 @@ Preface
 Explaining the Title
 ====================
 
-If you are wondering why this book isn’t called *Programming with ClojureScript*, it’s becaue the book is going to focus on the main task that programming does |---| transforming data.
+If you are wondering why this book isn’t called *Programming with ClojureScript*, it’s because the book focuses on the main task that programming does |---| transforming data.
 
 Transforming Data
 -----------------
 
-Consider this list of minimum and maximum temperatures over a seven-day period in February, 2016 in Tokyo, Japan:  [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]]. You could transform this to find:
+Consider this list of minimum and maximum temperatures over a seven-day period in February, 2016 in Tokyo, Japan, using brackets to group each pair of temperatures:  [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]]. You could transform this to find:
     
 * The week’s minimum and maximum temperatures: 2 |o| C and 21 |o| C
 * The average minimum and maximum temperatures:  13.43 |o| C and 6 |o| C
@@ -37,11 +37,11 @@ With ClojureScript
 
 In the world of mathematics, functions are the tools used to transform data. This is what the **functional
 programming** paradigm in the world of programming aims for: to describe algorithms as a series of
-functions that transform input to a desired output.
+functions that transforms input to a desired output.
 
-There are many functional programming languages out there, but I decided to go with
+There are many functional programming languages to choose from, but I decided to go with
 ClojureScript_ because it has a simple syntax that is similar to other languages such as Lisp_,
-Scheme_, and Racket_, and it comples to JavaScript_, which is `eating the world`_. 
+Scheme_, and Racket_, and it compiles to JavaScript_, which is `eating the world`_. 
 
 .. _ClojureScript: https://github.com/clojure/clojurescript
 .. _Lisp: https://en.wikipedia.org/wiki/Lisp_%28programming_language%29
@@ -58,13 +58,13 @@ This book may be for you if you are:
     
 * a person who has never programmed before
 * a beginning programmer
-* someone interested in learning what this whole “functional programming” thing is all about
+* someone interested in learning what this whole “functional programming” thing is about
 
 Who Should Not Read This Book
 =============================
 
 If you are an experienced programmer in functional languages, you will probably find little that is new or exciting here. If your purpose is to learn
-ClojureScript, you would do well to look at `ClojureScript Unraveled`_. (Although, if you want to read the book to make comments and/or improvements, please do!)
+ClojureScript, you would do well to look at `ClojureScript Unraveled`_. (Although, if you want to read this book to make comments and/or improvements, please do!)
 
 .. _ClojureScript Unraveled: https://funcool.github.io/clojurescript-unraveled/
 
