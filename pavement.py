@@ -8,11 +8,18 @@ from sphinxcontrib import paverutils
 
 sys.path.append(os.getcwd())
 
+updateProgressTables = True
+try:
+    from runestone.server.chapternames import populateChapterInfob
+except ImportError:
+    updateProgressTables = False
+
 home_dir = os.getcwd()
 master_url = 'http://127.0.0.1:8000'
 master_app = 'runestone'
 serving_dir = "./build/interactiveclojurescript"
 dest = "../../static"
+
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -28,8 +35,8 @@ options(
                        'appname':master_app,
                        'loglevel': 0,
                        'course_url':master_url,
-                       'use_services': 'false',
-                       'python3': 'false',
+                       'use_services': 'true',
+                       'python3': 'true',
                        'dburl': '',
                        'basecourse': 'interactiveclojurescript'
                         }
