@@ -34,7 +34,7 @@ As an example, here is ``filter`` used to extract only numbers that are multiple
 
 
 .. note::
-    By convention, boolean functions (functions that return ``true`` or ``false```) have
+    By convention, boolean functions (functions that return ``true`` or ``false``) have
     names ending with a question mark. Some of the built-in predicates in ClojureScript
     are ``even?``, ``odd?``, ``pos?`` (positive), ``neg?`` (negative), ``zero?``, and ``empty?`` (tests
     if a collection is empty or not).
