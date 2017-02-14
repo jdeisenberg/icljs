@@ -25,7 +25,7 @@ What’s Really Going On?
 -----------------------
 
 As you saw from the function box diagram, ``3 + 4 * 5`` means to add 3 to the result of multiplying 4 times 5.
-(That’s the order due to precedence of operations.)
+(That’s the order because multiplication is more important than division. This is referred to as *precedence of operations*.)
 
 To add 3 to something in ClojureScript, you write:
     
