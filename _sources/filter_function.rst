@@ -2,7 +2,7 @@
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
 
-Manipulating Collections - ``filter``  and ``partial``
+Manipulating Collections - filter and partial
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 The ``filter`` function processes a collection and yields a sequence of the items that fit certain criteria.

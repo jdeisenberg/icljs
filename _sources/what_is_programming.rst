@@ -82,10 +82,8 @@ out the proper formulas, and here is what I came up with:
 .. image:: images/good_plan.jpg
     :alt: Drawing on graph paper with detailed formulas
 
+This time, I drew a detailed diagram, and put numbers with the points on the graph. This gave me a much better idea of what calculations needed to be done, and how to do them.
 I also had to decide what data to pre-calculate. Conversion of coordinates for each axis is a linear function. Did I want to calculate the slopes and intercepts once, or do it for every point? What about the width and height of the drawing area, or the maximum and minimum *x*- and *y*-values?  How would I represent a list of points? An undifferentiated list of numbers, or a list consisting of sublists, each one of which contained an *x*- and *y*-coordinate?
 
 Once I finished that, then, and only then, was I ready to begin programming. You’ll see some of the results as examples and exercises as the book proceeds.
 
-.. note::
-    I am not even remotely happy with this page so far; it needs rewriting. In the meantime, I'll proceed with other topics.
-    (JDE, 15 May)

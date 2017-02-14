@@ -45,6 +45,7 @@ The following functions, which work on all collections, not just lists, are the 
 * ``first`` returns the first items in the collection
 * ``rest`` returns a sequence of all the items except the first one
 * ``last`` returns the last item in the collection
+* ``butlast`` returns a sequence of all the items except the last one
 * ``count`` gives you the number of items in the collection
 * ``list?`` returns ``true`` if its argument is a list, ``false`` otherwise
 * ``conj`` takes a collection and an item, and adds that item to the collection.

@@ -23,7 +23,7 @@ The main types of collections in Clojurescript are:
     
 * **list**: a sequence of items, usually intended to be processed sequentially from beginning to end. Thus:
     
-  ``(def price-list (list 3.95 6.80 2.49 5.33 1.99)``
+  ``(def price-list (list 3.95 6.80 2.49 5.33 1.99))``
   
 * **vector**: a sequence of items, intended to be accessed by their position (index)
 
