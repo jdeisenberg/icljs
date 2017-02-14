@@ -94,3 +94,11 @@ Sometimes I’ll give some extra information that is nice, but not necessary, to
     :hidetitle: Hide Further Information
     
     ...and here it is! Once you finish reading the extra material, you can click the hide button to hide it.
+
+Getting the Source
+====================
+
+The source files for this book are on GitHub at `<https://github.com/jdeisenberg/icljs>`_ The standard version of Runestone does not allow active code in ClojureScript; if you want to build the book, you will need `this fork of RunestoneComponents`_.
+
+.. _this fork of RunestoneComponents: https://github.com/jdeisenberg/RunestoneComponents
+
