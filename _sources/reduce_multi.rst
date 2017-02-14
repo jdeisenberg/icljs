@@ -71,7 +71,44 @@ Before just starting to write code, again, let’s analyze what needs to happen 
 .. image:: images/reduce_split1.png
   :alt: 3 in value goes to first result vector; 9 goes to second result vector
   
+In the preceding image, the first entry in the value (3) is added to the first result vector, and the second entry in the value (9) is added to the second result vector.
+  
 .. image:: images/reduce_split2.png
   :alt: 2 in value adds to first result vector; 13 adds to second result vector
 
+And, when processing the second item, the first entry in the value (2) is added to the first result vector, and the second entry in the value (13) is added to the second result vector.
 
+Given this information, write the ``split-temperatures`` function. Hint: use ``conj`` to add elements to a vector.
+
+.. container:: full_width
+
+    .. tabbed:: split_temperatures_area
+
+        .. tab:: Your Program
+
+            .. activecode:: split_temperatures__q
+                :language: clojurescript
+
+                (defn split-temperatures [result item]
+                  ; your code goes here
+                  )
+                
+                (def temperatures [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]])
+                
+                (reduce split-temperatures [[][]] temperatures)
+
+        .. tab:: Answer
+
+            .. activecode:: split_temperatures_answer
+                :language: clojurescript
+                
+                (defn split-temperatures [result item]
+                  (let [min-temp (first item)
+                        max-temp (last item)
+                        min-vec (first result)
+                        max-vec (last result)]
+                    (vector (conj min-vec min-temp) (conj max-vec max-temp))))
+                
+                (def temperatures [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]])
+                
+                (reduce split-temperatures [[][]] temperatures)
