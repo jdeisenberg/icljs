@@ -1,5 +1,13 @@
 ..  Copyright © J David Eisenberg
 
+.. meta::
+   :description: An interactive book introducing programming with ClojureScript
+   :keywords: Clojurescript, introduction, programming
+
+.. toc_version: 2
+
+.. _t_o_c:
+
 ====================================
 Transforming Data with ClojureScript
 ====================================
@@ -10,7 +18,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 2
 
-   preface
+   preface.rst
    
 The Basics
 ===========
@@ -18,14 +26,14 @@ The Basics
 .. toctree::
    :maxdepth: 2
    
-   functions
-   functions_in_cljs
-   advanced_arithmetic
-   arithmetic_exercises
-   symbols
-   diy_functions
-   local_syms
-   recap1
+   functions.rst
+   functions_in_cljs.rst
+   advanced_arithmetic.rst
+   arithmetic_exercises.rst
+   symbols.rst
+   diy_functions.rst
+   local_syms.rst
+   recap1.rst
    
 Working with Web Pages
 ======================
@@ -33,10 +41,10 @@ Working with Web Pages
 .. toctree::
    :maxdepth: 2
 
-   js_interact1
-   conditionals
-   strings
-   web_pages
+   js_interact1.rst
+   conditionals.rst
+   strings.rst
+   web_pages.rst
    
 Philosophical Interlude
 =======================
@@ -44,8 +52,8 @@ Philosophical Interlude
 .. toctree::
    :maxdepth: 2
    
-   pure_impure
-   what_is_programming
+   pure_impure.rst
+   what_is_programming.rst
    
 Collections
 ===========
@@ -53,13 +61,14 @@ Collections
 .. toctree::
    :maxdepth: 2
 
-   collections
-   lists
-   vectors
-   map_function
-   reduce_function
-   filter_function
-   threading
+   collections.rst
+   lists.rst
+   vectors.rst
+   map_function.rst
+   reduce_function.rst
+   reduce_multi.rst
+   filter_function.rst
+   threading.rst
    
 Putting It Together
 ===================
@@ -67,8 +76,8 @@ Putting It Together
 .. toctree::
    :maxdepth: 2
    
-   prices_app
-   prices_app_solution
+   prices_app.rst
+   prices_app_solution.rst
    
 More Topics
 ===========
@@ -76,7 +85,7 @@ More Topics
 .. toctree::
    :maxdepth: 2
    
-   recursion
+   recursion.rst
    
    
 Appendices
@@ -85,13 +94,12 @@ Appendices
 .. toctree::
    :maxdepth: 2
 
-   appendix_a
-   appendix_b
-   appendix_c
+   appendix_a.rst
+   appendix_b.rst
+   appendix_c.rst
 
 List of sections to be written; order and number of topics may change. (YMMV)
 
-* Recursion
 * Lazy Sequences 
 * Maps
 * Destructuring
