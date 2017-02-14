@@ -6,20 +6,8 @@
 
 Recursion
 ::::::::::::::::::::::::::::::::::::::::::::::
-
-Remember back in the preface, where you saw this vector of high and low temperatures?
-
-::
-
-    [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]]
     
-When I wanted to create the graph shown in the preface, I had to split the vector into two vectors: one of
-high temperatures and one of low temperatures::
-
-    [[3 2 4 4 4 9 16]
-    [9 13 10 9 12 20 21]]
-    
-While it is possible to use ``reduce`` to accomplish this goal, let’s investigate a technique called *recursion* to solve this problem. Recursion happens when a function calls itself. You can think of it as the programming equivalent of the `Droste Effect`_, where a picture contains a smaller version of itself.
+Recursion happens when a function calls itself. You can think of it as the programming equivalent of the `Droste Effect`_, where a picture contains a smaller version of itself.
 
 .. _Droste effect: https://en.wikipedia.org/wiki/Droste_effect
 
@@ -56,7 +44,7 @@ Each factorial can be defined in terms of yet another factorial |---| until you 
 Advanced Topic: Tail Recursion
 ================================
 
-We’ll get to the original problem (dividing the list of temperatures) later in this chapter, but there’s an important topic to cover first. If you were to try ``(factorial 50000)``, you would get an error: “Too much recursion.”  To see why this happens, let’s look at the expression ``(* n (factorial (- n 1)))`` when ``n`` is 5. In order to do the multiplication, ClojureScript has to first figure out what ``(factorial (- 5 1))`` works out to, so it has to “wait” until 4! is evaluated.  That calculation, in turn, will have to figure out 3! before it can do *its* multiplication, so it has to wait as well, and so on. Every time this happens, the function has to store its status in an area of memory called the **stack**. That stack has limited room, and once you are out of room, you get the “too much recursion” error. This error also goes by the name “stack overflow.”
+If you were to try ``(factorial 50000)``, you would get an error: “Too much recursion.”  To see why this happens, let’s look at the expression ``(* n (factorial (- n 1)))`` when ``n`` is 5. In order to do the multiplication, ClojureScript has to first figure out what ``(factorial (- 5 1))`` works out to, so it has to “wait” until 4! is evaluated.  That calculation, in turn, will have to figure out 3! before it can do *its* multiplication, so it has to wait as well, and so on. Every time this happens, the function has to store its status in an area of memory called the **stack**. That stack has limited room, and once you are out of room, you get the “too much recursion” error. This error also goes by the name *stack overflow*.
 
 There is a way around this problem. If the recursive call is the *very last thing* in the function, then you can use the ``recur`` function to say “do the recursion now,” and ClojureScript will optimize the code so that no stack space is needed for the recursion.  Having the recursion as the very last thing is called **tail recursion**. (In the preceding example, the recursion isn’t the last thing that happens in the function |---| it’s the multiplication).  To do factorials with the recursion as the very last operation, we’ll build a special helper function with two arguments. The first argument is the number whose factorial we want, and the second argument is the “result so far”:
   
@@ -99,7 +87,7 @@ You can use the ``first`` and ``rest`` functions to get the first element and re
 
   (add-up [17 4 26 3])  
 
-The preceding example isn’t tail recursive; again, the addition is the last operation. We can use the helper function trick to allow the use of ``recur``:
+The preceding example isn’t tail recursive because the addition is the last operation. We can use the helper function trick to allow the use of ``recur``:
   
 .. activecode:: tail_recursive_add
   :language: clojurescript
@@ -114,25 +102,128 @@ The preceding example isn’t tail recursive; again, the addition is the last op
   
   (add-up [17 4 26 3])
   
-At last! We are ready to accomplish the task we set out at the beginning: splitting the vector of minimum and maximum temperatures into the vector of minimums and the vector of maximums, and we’ll go straight to the tail recursive-with-helper-function solution.
+Strings as Collections
+======================================
 
-Our result is going to be a vector of two vectors, so, just as we started with 1 for our result in factorial and 0 for adding, the initial result is ``[[][]]``.
-The function will start by taking the first item in the temperatures: ``[3 9]``. It will use ``conj`` to append the 3 to the first empty vector in the result, and another ``conj`` to append the 9 to the second empty vector in the result.  It then will recursively call itself with the newly minted result and the remaining items in the tempearture vector. When the temperature vector is empty, our job here is done, and the result is what gets returned.
+The exercise for this chapter depends on being able to manipulate strings. It turns out that you can treat a string of characters, to a large extent, as if it were a sequence of characters. Try this:
 
-.. activecode:: tail_recursive_split
-  :language: clojurescript
+.. activecode:: strings_as_sequences
+    :language: clojurescript
+    
+    (def s "abcdefg")
+    (js/alert (count s))
+    (js/alert (first s))
+    (js/alert (rest s))
+    
+Note that ``rest`` returns a sequence of characters. If you want to gather all of the items in the sequence back into a single string, you can ``apply`` the ``str`` function to all the characters (try it in the preceding activecode)::
+
+    (apply str (rest s))
+    
+Recursion: Palindrome tester
+===============================
+
+You can now use recursion to write a function named ``is-palindrome?`` that takes a string as its parameter. If the string is a palindrome (it reads the same backwards and forwards), the function returns ``true``, otherwise ``false``. Thus, ``(is-palindrome? "peep")`` and ``(is-palindrome? "rotor")`` are ``true`` while ``(is-palindrome? "robber")`` is ``false``.
+
+How can you use recursion to tell if something is a palindrome? Let’s examine *rotor*. The first and last letters match, so we discard them and are left with *oto*. Is that a palindrome? (There’s the recursion) Its first and last letters match, so we discard them and are left with *t*, which, being only one letter, is a palindrome.  The same goes for *peep*. The first and last letters match, so we discard them and are left with *ee*. Again, we ask if the first and last letters match. They do, so we discard them, and we are left with nothing, which is the same backwards as forwards.
+
+The word *robber* isn't a palindrome: The first and last letters match, so we discard them, and are left with *obbe*. The first and last letters do **not** match, so the word isn’t a palindrome.
+
+Here’s the logic:
+
+* If the length of the string (using ``count``) is zero or one, we have a palindrome. This is the **end case**, which prevents infinite recursion.
+* Otherwise
+    * if the first and last letters match,
+        * See if everything else is a palindrome. This is where the recursion is. (Hint: use ``butlast`` and ``rest``)
+        * otherwise it’s not a palindrome
+
+.. container:: full_width
+
+    .. tabbed:: palindrome_area
+
+        .. tab:: Your Program
+
+            .. activecode:: palindrome_q
+                :language: clojurescript
+
+                (defn is-palindrome? [s]
+                  ; your code here
+                  )
+                
+                (is-palindrome? "rotor")
+
+        .. tab:: Answer
+
+            .. activecode:: palindrome_answer
+                :language: clojurescript
+
+                 (defn is-palindrome? [s]
+                    (if (<= (count s) 1)
+                      true
+                      (if (= (first s) (last s))
+                        (recur (butlast (rest s)))
+                        false)))
+                
+                (is-palindrome? "rotor")
+
+A Better Palindrome Tester
+============================
+
+The preceding function works fine, but it would be nice to be able to test for sentences like “A man, a plan, a canal - Panama!” or “Madam, I’m Adam.”  In order to do this, you would want to convert the string to all lower case and get rid of anything that isn’t a letter.  You can use ``.toLowerCase`` to do the first part. Keeping only letters is a perfect job for ``filter`` once you know how to test if a character is between ``"a"`` and ``"z"`` inclusive. You can’t do this::
+
+  (def ch "p")
+  (and (>= ch "a") (<= ch "z"))
   
-  (defn split-temperatures [result temperatures]
-     (if (empty? temperatures)
-       result
-       (let [head (first temperatures)
-             min-temp (first head)
-             max-temp (last head)]
-         (recur [(conj (first result) min-temp)
-                 (conj (last result) max-temp)]
-          (rest temperatures)))))
-         
-  (split-temperatures
-    [[][]]
-    [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]])
+because ``>=`` and ``<=`` expect numbers. However, you can use the ``compare`` function.  ``compare`` returns a negative number if its first argument is less than its second argument, zero if they are equal, and positive if the first argument is greater than the second argument.  Thus::
+
+  (compare 3 5) ; returns -1
+  (compare 5 5) ; returns 0
+  (compare 7 5) ; returns 1
+  (compare "a" "c") ; returns -1
+  (compare "x" "t") ; returns 1
   
+So, you can see if a character is a letter (at least for English) with a test like this::
+
+  (and (>= (compare ch "a") 0) (<= (compare ch "z") 0))
+  
+Given this information, see if you can improve the palindrome function by converting to lower case, filtering to keep letters only, and then using the existing ``is-palindrome?`` function. Hint: you can use threading ``->>`` to make your code more readable.
+
+.. container:: full_width
+
+    .. tabbed:: palindrome2_area
+
+        .. tab:: Your Program
+
+            .. activecode:: palindrome2_q
+                :language: clojurescript
+
+                (defn is-palindrome? [s]
+                  ; previous code goes here
+                  )
+                
+                (defn better-palindrome [s]
+                  ; this will call is-palindrome?
+                  )
+                  
+                (better-palindrome "Madam, I'm Adam.")
+
+        .. tab:: Answer
+
+            .. activecode:: palindrome2_answer
+                :language: clojurescript
+                
+                (defn is-letter? [ch]
+                    (and (>= (compare ch "a") 0) (<= (compare ch "z") 0)))
+
+                 (defn is-palindrome? [s]
+                    (if (<= (count s) 1)
+                      true
+                      (if (= (first s) (last s))
+                        (recur (butlast (rest s)))
+                        false)))
+                        
+                (defn better-palindrome [s]
+                  (->> s .toLowerCase
+                         (filter is-letter?)
+                         is-palindrome?))
+                         
+                (better-palindrome "Madam, I'm Adam.")
