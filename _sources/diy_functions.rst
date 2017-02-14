@@ -24,7 +24,7 @@ Analyzing this step by step:
 * The first argument to ``fn`` is a *vector* of parameter names. A vector is a sequence of items in square brackets. (You will learn more about vectors in :doc:`an upcoming chapter <vectors>`.) The function you’re defining needs two inputs, so there are two items in the vector. In this case, they have generic names: ``a`` and ``b``.
 * The second argument to ``fn`` is the *function body.* In this case, it consists of one nested expression: ``(/ (+ a b) 2.0)``. The value of the last expression in the function body is the function’s result.
 
-Once a function is defined, you can call it just like any other ClojureScript function; you give its name after an opening parenthesis, follow it by the arguments you want to transform, and close the parentheses.
+Once a function is defined, you can call it exactly like any other ClojureScript function; you give its name after an opening parenthesis, follow it by the arguments you want to transform, and close the parentheses.
 
 .. activecode:: average_function
     :caption: The average function

@@ -59,7 +59,7 @@ Expressions: The Mechanical Method
 ==================================
 
 Let’s return to the expression ``3 + 4 * 5``\. Fully parenthesize the expression, which gives you
-``(3 + (4 * 5))``\. Now just switch the first operand and the operator within each set of parentheses.
+``(3 + (4 * 5))``\. Then switch the first operand and the operator within each set of parentheses.
 
 .. figure:: images/switch_positions.png
    :alt: Arrows showing switch of 3 and +, 4 and *

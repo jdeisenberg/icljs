@@ -17,7 +17,7 @@ essence of their job in a short sentence:
 
 As a programmer, the essence of my job was: “I tell computers how to do things.” Programming is not
 ClojureScript; it’s not knowing where to put the parentheses or memorizing a list of functions
-built into the language. The language is just a vehicle to assist you in arriving at your destination:
+built into the language. The language is a *vehicle* to assist you in arriving at your destination:
 a program that tells the computer how to do things.
 
 The choice of vehicle often depends on the task at hand. Just as a two-seat convertible is not
@@ -56,7 +56,7 @@ An Example
 ===========
 
 I put these steps into practice when I wrote the program to generate the graph in the :doc:`preface </preface>`. First, I had to figure
-out the problem I wanted to solve. Why didn’t I just use an existing JavaSript charting library and call it from ClojureScript? Wouldn’t that
+out the problem I wanted to solve. Why didn’t I use an existing JavaSript charting library and call it from ClojureScript? Wouldn’t that
 be easier than “reinventing the wheel”?\ [1]_ Yes, I could have done that, but then you wouldn’t have
 really learned much about ClojureScript. Also, I wanted to see if I could do it, and see what interesting problems I ran into along the way, so that
 I could include material about that in this book.

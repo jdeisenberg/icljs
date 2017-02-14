@@ -303,7 +303,7 @@ Exercises
         .. tab:: Answer 2 (better)
             
             The ``(and...``) expression already gives you a value of ``true`` or ``false``, depending on the
-            arguments. There is no reason to use ``if`` to return the value; just evaluate the expression and
+            arguments. There is no reason to use ``if`` to return the value; instead, evaluate the expression and
             use that as the function value.
             
             .. activecode:: triangle_answer2
