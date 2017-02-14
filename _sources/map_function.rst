@@ -48,7 +48,7 @@ Here is a short video that may help as well:
 Something Important Just Happened
 ====================================
 Up to this point, all of the arguments to functions have been raw data, like numbers and strings.
-This is the first time you have seen a function as an argument to another function. I deliberately used the ``(def)`` form instead of ``(defn)`` to remind you that you can bind a function to a symbol, just as you can bind numbers or strings or lists to symbols. In ClojureScript, functions may be considered as just another type of data that you can bind to symbols and pass to and from other functions. That’s exactly what has happened here: I passed the ``discount`` function as an argument to the ``map`` function.
+This is the first time you have seen a function as an argument to another function. I deliberately used the ``(def)`` form instead of ``(defn)`` to remind you that you can bind a function to a symbol, just as you can bind numbers or strings or lists to symbols. In ClojureScript, functions may be considered as another type of data that you can bind to symbols and pass to and from other functions. That’s exactly what has happened here: I passed the ``discount`` function as an argument to the ``map`` function.
 
 When you have a function like ``map`` that takes another function as an argument, it is referred to as a *higher-order function*.
 (If a function returns another function as a result |---| yes, this is possible |---| it is also a higher-order function.)

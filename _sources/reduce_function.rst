@@ -2,7 +2,7 @@
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
 
-Manipulating Collections - ``reduce`` 
+Manipulating Collections - reduce
 ::::::::::::::::::::::::::::::::::::::
 
 The ``map`` function creates a new sequence with the same number of items as in the original collection. Sometimes, however, you want to process a collection and
