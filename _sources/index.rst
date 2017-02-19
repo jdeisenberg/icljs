@@ -85,6 +85,9 @@ More Topics
 .. toctree::
    :maxdepth: 2
    
+   destructuring.rst
+   maps1.rst
+   maps2.rst
    recursion.rst
    
    
@@ -102,9 +105,14 @@ List of sections to be written; order and number of topics may change. (YMMV)
 
 * Lazy Sequences 
 * Maps
-* Destructuring
 * Sets
 * Regular Expressions
 
+.. image:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+  :alt: Creative Commons License
+  :target: http://creativecommons.org/licenses/by-nc-sa/4.0/
+  :align: center
+  
+This work is licensed under a `Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-nc-sa/4.0/>`_
 
         
