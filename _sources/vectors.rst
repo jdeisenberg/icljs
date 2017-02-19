@@ -24,9 +24,9 @@ Again, look at the following operations that work on all collections, which incl
 * ``last`` returns the last item in the collection
 * ``count`` gives you the number of items in the collection
 * ``vector?`` returns ``true`` if its argument is a vector, ``false`` otherwise
-* ``conj`` takes a collection and an item, and adds that item to the collection.
+* ``conj`` takes a collection and an item, and returns a new collection with that element added to the collection.
 
-In the case of vectors, ``conj`` adds the new element at the **end** of the list.  Try these expressions in the following active code box, or use a series
+In the case of vectors, ``conj`` puts the new element at the **end** of the vector that it returns.  Try these expressions in the following active code box, or use a series
 of ``println`` to do them all at once; for your convenience, the ``price-vector`` vector has been defined.
 
 ::
@@ -41,6 +41,8 @@ of ``println`` to do them all at once; for your convenience, the ``price-vector`
     :language: clojurescript
 
     (def price-vector [3.95 6.80 2.49 5.33 1.99])
+
+Remember that the result of all of these functions is a brand new vector; the original vector is immutable and remains untouched.
 
 When you tried ``(rest price-vector)``, you may have noticed that the output did *not* have square brackets: the result was ``(6.8 2.49 5.33 1.99)``  That is because the result of the ``rest`` function is a *sequence*, as shown by the ``type`` function:
 

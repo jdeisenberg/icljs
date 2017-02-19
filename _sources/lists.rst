@@ -48,7 +48,7 @@ The following functions, which work on all collections, not just lists, are the 
 * ``butlast`` returns a sequence of all the items except the last one
 * ``count`` gives you the number of items in the collection
 * ``list?`` returns ``true`` if its argument is a list, ``false`` otherwise
-* ``conj`` takes a collection and an item, and adds that item to the collection.
+* ``conj`` takes a collection and an item, and returns a new collection with the item added to it.
 
 In the case of lists, ``conj`` adds the new element at the beginning of the list.  Try these expressions in the following active code box, or use a series
 of ``println`` to do them all at once; for your convenience, the ``price-list`` list has been defined.
@@ -78,7 +78,7 @@ As noted previously, lists are designed to be accessed from beginning to end. It
 
 One important aspect of all ClojureScript collections is that they are *persistent*. All the functions that ClojureScript provides to manipulate collections return a new version of the collection.
 
-Again, a concrete example: the ``conj``  function adds a new element to a collection; when used with a list, it adds a new element at the beginning of the list:
+Again, a concrete example: the ``conj``  function returns a new collection with the desired item added to it. (The name ``conj`` stands for “conjoin.”) When used with a list, ``conj`` adds a new element at the beginning of the list that it returns:
     
 .. activecode:: list-conj
     :caption: Show how conj works with lists
