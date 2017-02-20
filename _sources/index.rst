@@ -88,6 +88,8 @@ More Topics
    destructuring.rst
    maps1.rst
    maps2.rst
+   atoms.rst
+   
    recursion.rst
    
    
