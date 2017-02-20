@@ -105,7 +105,7 @@ If you give a key and value that aren’t in the map, they will be added. So, gi
              :phone "408-555-1234"}
    :price {:adult 7.50}}
 
-You don’t have to define the original ``event``.
+The original ``event`` has already been defined for you.
 
 .. container:: full_width
 
@@ -115,7 +115,7 @@ You don’t have to define the original ``event``.
 
             .. activecode:: assoc_exercise_q
                 :language: clojurescript
-                :include event_def
+                :include: event_def
 
                 ; your code here
 
