@@ -94,3 +94,11 @@ And here’s some code that uses ``reduce`` to create a new map where the capita
   (reduce (fn [result [key value]] (assoc result value key))
     {} capital-map)
   
+You can also get the keys and values as separate sequences with the ``keys`` and ``vals`` functions:
+  
+.. activecode:: keys_and_values
+  :language: clojurescript
+  :include: map_defined
+  
+  (println "Keys:" (keys capital-map))
+  (println "Values:" (vals capital-map))
