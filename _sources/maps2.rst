@@ -36,7 +36,10 @@ If you use keywords as your map’s keys, you can also use the keys as if they w
   
   (:population province)
 
-And, if the population changes, you can use ``assoc`` to create a new map with an updated part of the data structure:
+Modifying maps with ``assoc``
+================================
+
+You can use ``assoc`` to create a new map with an updated part of the data structure. ``assoc`` takes as its arguments the name of the map, the key, and the new value. You can have more than one key and value pair after the map name. Thus, to create a new map with a modified population, you could do this:
   
 .. activecode:: update_map
   :language: clojurescript
@@ -44,7 +47,7 @@ And, if the population changes, you can use ``assoc`` to create a new map with a
   
   (assoc province :population 2800000)
   
-You can have maps within maps. Consider this data structure for an event:
+It is possible to have maps within maps. Consider this data structure for an event:
   
 .. activecode:: event_def
   :language: clojurescript
@@ -127,3 +130,28 @@ The original ``event`` has already been defined for you.
 
                 (assoc-in event [:price :adult] 7.50)
 
+Modifying maps with ``update``
+===================================
+
+The ``update`` and ``update-in`` functions are similar to ``assoc`` and ``assoc-in``, in that they create modified versions of the original map. Instead of key and value pairs, you give a key and a function name and, if necessary, other arguments. The function is applied to the key and the arguments. If you wanted to chnge the ``province`` map for a 10% increase in population, you could do this:
+  
+.. activecode:: update_map
+  :languge: clojurescript
+  :include: map_data_structure
+  
+  (update province :population * 1.1)
+
+You could do this with ``assoc``, but it would be clunkier code::
+  
+  (assoc province :population (* 1.1 (:population province)))
+
+Similarly, you can use ``update-in`` to update a value in a nested map. If, for some unknown reason, you wanted to change the name of the city for the event to all uppercase, you could do this:
+  
+.. activecode:: update_in_map
+  :language: clojurescript
+  :include: event_def
+  
+  (defn upper [s] (.toUpperCase s))
+  (update-in event [:location :city] upper)
+
+So, what is the difference between ``assoc`` and ``update``? If you want to replace a value with a new one, use ``assoc``. If you want to perform some operation on a value to create a new value, use ``update``.
