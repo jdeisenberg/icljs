@@ -92,6 +92,7 @@ More Topics
    
    recursion.rst
    
+The remainder of the book will be two projects, taken from design to implementation.
    
 Appendices
 ==========
@@ -102,13 +103,6 @@ Appendices
    appendix_a.rst
    appendix_b.rst
    appendix_c.rst
-
-List of sections to be written; order and number of topics may change. (YMMV)
-
-* Lazy Sequences 
-* Maps
-* Sets
-* Regular Expressions
 
 .. image:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
   :alt: Creative Commons License
