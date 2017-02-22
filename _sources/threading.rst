@@ -44,7 +44,7 @@ This is more in line with a description of the algorithm as “Take the numbers 
 Use whichever method makes the algorithm more clear to you; that will make it clear to other people |---| and when you come back to code you wrote a few months ago, *you* will be “other people.”
 
 .. reveal:: reveal_singlethread
-    :showtitle: Learn about ->
+    :showtitle: Learn about the -> form
     :hidetitle: Hide Information
     
     There is also a ``->`` form, known as “thread first”; it works the same as ``->>`` except it inserts the list as the first item in the subsequent expressions.

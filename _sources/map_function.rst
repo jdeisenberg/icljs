@@ -6,7 +6,7 @@ Manipulating Collections
 ::::::::::::::::::::::::::
 
 The previous two pages gave you the fundamentals of lists and vectors, but if you think there was something missing, you are correct
-You may have een wondering how you work with the items in a collection one after another.  In this page and the next pages, we will show you three of the most important functions for manipulating collections:  ``map``, ``reduce``, and ``filter``.
+You may have been wondering how you work with the items in a collection, one after another.  In this page and the next pages, we will show you three of the most important functions for manipulating collections:  ``map``, ``reduce``, and ``filter``.
 
 
 The ``map`` function

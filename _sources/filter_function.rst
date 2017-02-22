@@ -74,7 +74,7 @@ There’s only one problem with this: the predicate function to ``filter`` takes
     
 because you don’t know the average in advance. You *could* use ``def`` to bind ``avg`` to some value and then change it later with ``set!``, but that goes counter to the principles of functional programming |---| you don’t want to re-bind a symbol to a new value if you don’t have to, and in this case, you don’t have to.
 
-Instead, you can use ``partial``. Before showing you how it is written, here’s the idea behind it. You know how you login to an e-commerce site you’ve used before and you purchase a new item? The checkout form shows up with much of the information already filled in (name, shipping/billing address) and all you need to do is  complete one or two items. In essence, the form is *partially* filled in.
+Instead, you can use ``partial``. Before showing you how it is written, here’s the idea behind it. When you log in to an e-commerce site you’ve used before to purchase a new item, the checkout form shows up with much of the information already filled in (name, shipping/billing address). All you need to do is complete one or two items. In essence, the form is *partially* filled in.
 
 So here’s the trick: we’re going to give ``partial`` the two-parameter function and the first argument. The result will be a partially-called function that is waiting to be called with the second argument, much as the web site sends you a partially-completed form that is waiting to be completed with extra information.
 

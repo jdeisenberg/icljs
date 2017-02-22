@@ -61,8 +61,8 @@ high temperatures and one of low temperatures::
     [[3 2 4 4 4 9 16]
     [9 13 10 9 12 20 21]]
     
-Now that you know that ``reduce`` can yield a result of any sort, you can write a function that you can use with ``reduce`` to split up the tempetature vector.
-The result is going to be a vector of two vectors, so,  the initial result is ``[[][]]``, and the call will be::
+Now that you know that ``reduce`` can yield a result of any sort, you can write a function that ``reduce`` will use to split up the tempetature vector.
+The result is going to be a vector of two vectors, so the initial result is ``[[][]]``, and the call will be::
   
   (reduce split-temperatures [[][]] temperatures)
 

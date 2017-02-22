@@ -22,8 +22,8 @@ Here is the general form of the ``reduce`` function that we will use:
     
 where
 
-* ``f`` is a function that has two parameters: the current accumulated value and the item under consideration
-* ``initial`` is the initial value of the accumulated value
+* ``f`` is a function that has two parameters: the current accumulated result and the item under consideration
+* ``initial`` is the initial value of the accumulated result
 * ``collection`` is the collection to be reduced
 
 As an example, here is ``reduce`` used to calculate the sum of squares of a set of numbers:
@@ -52,7 +52,7 @@ Here’s a video that shows how it works:
     :align: center
     
 If you do not provide an initial value, ``reduce`` will use the first two values in the collection as input to the reducing function. So, if you
-wanted to find the sum of all the values in a vector, you could simply do this. I’m using a longer vector for clarity:
+wanted to find the sum of all the values in a vector, you could simply do the following, which uses a longer vector for clarity:
     
 .. activecode:: sum_vector
     :caption: Sum a vector

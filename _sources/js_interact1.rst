@@ -122,7 +122,7 @@ Exercises
             .. _radians: https://en.wikipedia.org/wiki/Radian
 
             Then use your ``to-radians`` function to calculate the sine of 30 degrees.
-            Due to accuracy of math, the result of running
+            Because computations have a limited number of digits of accuracy, the result of running
             your code will be something like 0.4999999... instead of exactly 0.5
 
             .. activecode:: radians_q
