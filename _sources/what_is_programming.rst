@@ -42,7 +42,7 @@ Usually, writing a program consists of these steps:
    * How you want to represent your data
    * What functions you need for transforming the data to arrive at your solution
 
-   It has been only half-jokingly said that “Hours of programming will save you minutes of planning.”
+   As the funny (but somewhat serious) saying goes, “Hours of programming will save you minutes of planning.”
    I realize there is a great temptation to get a half-formed idea of a solution in your head and then
    run to the keyboard and start pounding away. Resist this temptation; such an approach is a waste of time.
    The functional programming style richly rewards pre-planning.
