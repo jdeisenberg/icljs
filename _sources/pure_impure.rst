@@ -60,7 +60,7 @@ the number 5 itself does not change, and *x* still stands for 5.
 Similarly, in ClojureScript, functions generally do not modify their arguments (but see the following section for exceptions).
 This means you can call functions with the confidence that they will not stomp all over your carefully constructed bindings.
 
-In the doc:`example of accessing web page data </web_pages>`, you can see the `(set!)` function, which changes the value that
+In the :doc:`example of accessing web page data </web_pages>`, you can see the `(set!)` function, which changes the value that
 is bound to the ``.-innerHTML`` property of a paragraph on the web page. The exclamation point is a convention in ClojureScript
 that warns you that the function is impure and modifies its arguments.
 
