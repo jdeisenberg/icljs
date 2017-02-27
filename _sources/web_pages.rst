@@ -14,9 +14,9 @@ Up to this point, your interaction with JavaScript has only been making calls to
     (defn age-in-days [years]
       (* years 365))
     
-    (age-in-days 62)
+    (age-in-days 63)
     
-That works for me at my present age, but you probably aren’t 62 years old, and even if you are, next year both you and I will be older, so we will have to change the argument to ``age-in-days``. That’s OK for us; we’re programmers and we are cool with that :) We can’t, however, expect people using our programs to go rooting around in our code to get the results they want.
+That works for me at my present age, but you probably aren’t 63 years old, and even if you are, next year both you and I will be older, so we will have to change the argument to ``age-in-days``. That’s OK for us; we’re programmers and we are cool with that :) We can’t, however, expect people using our programs to go rooting around in our code to get the results they want.
     
 For people who are used to web pages, you want to write HTML like this:
     

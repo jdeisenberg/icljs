@@ -36,7 +36,7 @@ code, the ``println`` function (the name stands for “print line”) is used to
     :caption: Define Symbol Bindings Here
     :language: clojurescript
     
-    (def years 62)
+    (def years 63)
     (def days (* 365 years))
     (println days)
 
@@ -96,7 +96,7 @@ Again, in terms of meaningfulness, a name like ``ir`` would be far too short, an
         :caption: Letters aren’t just A-Z
         :language: clojurescript
         
-        (def лет 62)
+        (def лет 63)
         (def дней (* лет 365))
         (println дней)
         
