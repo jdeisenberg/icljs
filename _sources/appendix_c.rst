@@ -90,7 +90,7 @@ Line 6
 Lines 10-16
     Don’t ask! :) This is fairly advanced stuff, which we may (or may not) cover in other parts of the book.
     
-OK, *now* run ``lein fighweel``\. (If you are on Linux, you will want to type ``rlwrap lein figwheel`` to enable the arrow keys i the REPL, which we will discuss later.) The first time you do this, Leiningen will download a whole lot of files that are required for figwheel. Once that is complete, fire up your browser and go to ``http://localhost:3449/index.html`` as instructed. Open the developer console, and you will see something like this:
+OK, *now* run ``lein fighweel``\. (If you are on Linux, you will want to type ``rlwrap lein figwheel`` to enable the arrow keys in the REPL, which we will discuss later.) The first time you do this, Leiningen will download a whole lot of files that are required for figwheel. Once that is complete, fire up your browser and go to ``http://localhost:3449/index.html`` as instructed. Open the developer console, and you will see something like this:
 
 .. figure:: images/appendix_c/console_output_1.png
    :alt: Console showing output from program
