@@ -19,6 +19,7 @@ Table of Contents
    :maxdepth: 2
 
    preface.rst
+   canvas_api.rst
    
 The Basics
 ===========
@@ -92,7 +93,13 @@ More Topics
    
    recursion.rst
    
-The remainder of the book will be two projects, taken from design to implementation.
+Project 1 - Graphing
+=======================
+
+.. toctree::
+  :maxdepth: 2
+  
+  project_intro.rst
    
 Appendices
 ==========
