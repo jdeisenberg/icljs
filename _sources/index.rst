@@ -100,6 +100,8 @@ Project 1 - Graphing
   :maxdepth: 2
   
   project_intro.rst
+  canvas.rst
+  canvas2.rst
    
 Appendices
 ==========
