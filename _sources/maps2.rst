@@ -136,7 +136,7 @@ Modifying maps with ``update``
 The ``update`` and ``update-in`` functions are similar to ``assoc`` and ``assoc-in``, in that they create modified versions of the original map. Instead of key and value pairs, you give a key and a function name and, if necessary, other arguments. The function is applied to the key and the arguments. If you wanted to chnge the ``province`` map for a 10% increase in population, you could do this:
   
 .. activecode:: update_map
-  :languge: clojurescript
+  :language: clojurescript
   :include: map_data_structure
   
   (update province :population * 1.1)
