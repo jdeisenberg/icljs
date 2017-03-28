@@ -3,8 +3,7 @@
    :trim:
 
 Doing More Than One Operation
-:::::::::::::::::::::::::::::
-
+''''''''''''''''''''''''''''''
 
 What if you want to write ``3 + 4 * 5`` in ClojureScript? A function box diagram of this expression
 looks like this:

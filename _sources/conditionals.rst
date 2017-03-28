@@ -3,7 +3,7 @@
    :trim:
 
 Conditionals
-::::::::::::::::
+'''''''''''''''''''
 
 Consider the following function, which, given a price and quantity, calculates a total cost with a 5% discount:
     

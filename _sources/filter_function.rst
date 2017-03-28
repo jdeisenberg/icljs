@@ -3,7 +3,7 @@
    :trim:
 
 Manipulating Collections - filter and partial
-::::::::::::::::::::::::::::::::::::::::::::::::::::::
+''''''''''''''''''''''''''''''''''''''''''''''''
 
 The ``filter`` function processes a collection and yields a sequence of the items that fit certain criteria.
 

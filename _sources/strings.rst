@@ -3,7 +3,7 @@
    :trim:
 
 Strings
-::::::::::::::::
+''''''''
 
 All of the functions you have seen so far have worked with numbers or boolean (true/false) values. *Strings* are the other main type of data that you will be transforming with ClojureScript. 
 

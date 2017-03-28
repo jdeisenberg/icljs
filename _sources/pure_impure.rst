@@ -3,7 +3,7 @@
    :trim:
 
 Pure and Impure Functions
-:::::::::::::::::::::::::::
+''''''''''''''''''''''''''
 
 Almost all of the functions you have seen to this point are *pure* functions: given the same input, they always
 give you the same output. This is very much what you would expect from mathematical functions; when you take

@@ -3,7 +3,7 @@
    :trim:
 
 Functions
-:::::::::
+'''''''''''
 
 The heart of functional programming is, of course, the **function**. Here’s a brief review of what a function is.
 

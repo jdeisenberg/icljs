@@ -3,7 +3,7 @@
    :trim:
 
 Symbols
-:::::::::
+'''''''''
 
 Doing arithmetic with concrete numbers is fine, but when you move from arithmetic to algebra, you use variables so that you can manipulate abstract symbols. Similarly, in ClojureScript, you want to be able to describe transformations of data in abstract terms.  Before we talk about ClojureScript, let’s look a bit more closely at algebraic variables.
 

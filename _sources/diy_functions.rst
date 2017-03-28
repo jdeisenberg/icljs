@@ -3,7 +3,7 @@
    :trim:
 
 Writing Your Own Functions
-::::::::::::::::::::::::::
+''''''''''''''''''''''''''''
 
 These built-in functions (and ClojureScript has many, many more) are all well and good, but I’m guessing you are wondering how you can write your own functions. Wonder no longer; here we go.
 

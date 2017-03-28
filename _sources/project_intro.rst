@@ -3,7 +3,7 @@
    :trim:
 
 Projects
-:::::::::::
+'''''''''
   
 Up to this point, for the most part, I’ve thrown a lot of small examples at you to show how specific constructs work. Now it’s time to do a larger program and put some of these things together. The larger program, in this case, will be the program that used this list of mnimum and maximum temperatures::
   

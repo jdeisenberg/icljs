@@ -3,7 +3,7 @@
    :trim:
 
 Lists
-:::::::::
+''''''
 
 A list is a series of items inside parentheses. You have been working with lists all throughout this book.  
 ``(+ 3 5)`` is a list. Its first element is a function, and the remaining elements are numbers. Again, up

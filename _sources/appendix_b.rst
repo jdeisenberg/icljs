@@ -3,7 +3,7 @@
    :trim:
 
 Appendix B: CSS (Cascading Style Sheets)
-::::::::::::::::::::::::::::::::::::::::::::::
+'''''''''''''''''''''''''''''''''''''''''
 
 In :doc:`Appendix A </appendix_a>` you got a brief introduction to HTML. If you make a web page using these tags, you can communicate your content, but it will look very plain. If you want your pages to look better aesthetically, you will want to style your pages. For example, you may want all ``<strong>`` text to show up in red, or you might want all your level one headings (``<h1>``) to be italic in Garamond font. 
 

@@ -3,7 +3,7 @@
    :trim:
 
 Price and Discount Solution
-:::::::::::::::::::::::::::::
+''''''''''''''''''''''''''''
 
 Here is my proposed solution for the price and discount problem described on the previous page.
 Your solution will almost certainly not look like mine, since everyone has their own way of

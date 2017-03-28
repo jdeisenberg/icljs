@@ -3,7 +3,7 @@
    :trim:
 
 Collections
-:::::::::::::::
+''''''''''''
 
 So far, we have been working with symbols bound to a single variable, as in ``(def price 3.95)``. But what if you had a group of
 five prices that you wanted to work with, for example, discounting them all by 10% or finding their mean and standard deviation? You certainly don’t want to do something like this:

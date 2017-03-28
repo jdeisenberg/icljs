@@ -5,7 +5,7 @@
    :trim:
 
 Recursion
-::::::::::::::::::::::::::::::::::::::::::::::
+''''''''''''''
     
 Recursion happens when a function calls itself. You can think of it as the programming equivalent of the `Droste Effect`_, where a picture contains a smaller version of itself.
 

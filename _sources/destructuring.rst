@@ -3,7 +3,7 @@
    :trim:
 
 De-structuring
-::::::::::::::::::
+''''''''''''''
 
 Back in the :doc:`chapter on reduce </reduce_multi>`, you wrote code to split this series of temperatures::
   

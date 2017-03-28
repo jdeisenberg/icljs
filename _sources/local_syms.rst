@@ -3,7 +3,7 @@
    :trim:
 
 Local Bindings
-:::::::::::::::
+'''''''''''''''
 
 You may have noticed that all the functions on the previous page had parameters named ``a`` and ``b``. You may also have wondered how it was possible to use the same symbol in both functions without a conflict.
 

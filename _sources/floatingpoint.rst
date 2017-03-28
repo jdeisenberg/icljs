@@ -5,7 +5,7 @@
    :trim:
 
 What does Floating Point Mean?
-::::::::::::::::::::::::::::::
+'''''''''''''''''''''''''''''''''
     
 *Floating point* is a term that generally means “a number with a decimal point in it,” as opposed to an integer.
 Why is it called such a strange name? It’s not arbitrary; there’s a story behind it.

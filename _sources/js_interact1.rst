@@ -3,7 +3,7 @@
    :trim:
 
 Interacting with JavaScript
-:::::::::::::::::::::::::::::::
+''''''''''''''''''''''''''''
 
 Let’s say you wanted to write a function to find the distance between two points (*x*\ :sub:`1`\ , *y*\ :sub:`1`\ )
 and (*x*\ :sub:`2`\ , *y*\ :sub:`2`\ ), using the Pythagorean distance formula:

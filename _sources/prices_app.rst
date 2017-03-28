@@ -3,7 +3,7 @@
    :trim:
 
 Price and Discount Web Page
-:::::::::::::::::::::::::::::
+''''''''''''''''''''''''''''
 
 Let’s put together the things you have learned about collections to present a web page where
 people can give a list of prices (separated by blanks), and a discount. The page will then show

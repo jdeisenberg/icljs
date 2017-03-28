@@ -3,7 +3,7 @@
    :trim:
 
 Threading Function Calls
-::::::::::::::::::::::::::::
+'''''''''''''''''''''''''
 
 At some point, you will be writing sequences of collection-processing functions. Presume,
 for some reason, you wanted the sum of all squared integers that are less than 1000 and divisible by four.

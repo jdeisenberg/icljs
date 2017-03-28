@@ -3,7 +3,7 @@
    :trim:
 
 Appendix A: Basics of HTML
-::::::::::::::::::::::::::::::
+'''''''''''''''''''''''''''
 
 Since ClojureScript is designed to work with web pages, you wil need to know the basics of HTML |---| the language of web pages.
 

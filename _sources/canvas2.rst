@@ -3,7 +3,7 @@
    :trim:
 
 Experimenting with canvas methods
-:::::::::::::::::::::::::::::::::::::
+''''''''''''''''''''''''''''''''''
 
 Here is your canvas (200 x 200):
 
@@ -28,10 +28,10 @@ Here is code to get the context and, for your convenience, a function to clear t
           h (.-height canvas)]
       (.beginPath ctx)
       (set! (.-fillStyle ctx) "white")
-      (rect 0 0  w h)
+      (.rect ctx 0 0  w h)
       (.fill ctx)))
       
-Here are some of the things you can put in a path. A `complete summary is at this link <https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths>`_
+Here are some of the things you can put in a path. A complete summary is `at this link <https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths>`_
 
 ``(.beginPath ctx)``
     Begins a new subpath
@@ -50,6 +50,3 @@ Here are some of the things you can put in a path. A `complete summary is at thi
   
 ``(.arcto ctx x1 y1 x2 y2 r)``
     Draw an arc from point (*x1*, *y1*) to point (*x2*, *y2*). The arc is part of a circle with radius *r*.
-
-  
-  

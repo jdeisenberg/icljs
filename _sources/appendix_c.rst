@@ -3,7 +3,7 @@
    :trim:
 
 Appendix C: Creating a ClojureScript Project
-::::::::::::::::::::::::::::::::::::::::::::::
+'''''''''''''''''''''''''''''''''''''''''''''
 
 At some point you will want to leave the confines of this book’s active code snippets and write a ClojureScript project.
 This appendix (to be written) shows you how.

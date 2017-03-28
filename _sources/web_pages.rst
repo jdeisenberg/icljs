@@ -3,7 +3,7 @@
    :trim:
 
 Accessing Web Pages
-::::::::::::::::::::
+''''''''''''''''''''
 
 Up to this point, your interaction with JavaScript has only been making calls to its functions. You may also have noticed that all the input for the functions have come from arguments that you have entered in ClojureScript. Modifying a previous example:
     

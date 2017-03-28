@@ -3,7 +3,7 @@
    :trim:
 
 Manipulating Collections - reduce
-::::::::::::::::::::::::::::::::::::::
+'''''''''''''''''''''''''''''''''''
 
 The ``map`` function creates a new sequence with the same number of items as in the original collection. Sometimes, however, you want to process a collection and
 get a single item as a result; for example, you might want the minimum or maximum of a list of numbers, their sum (in order to compute the average), or their

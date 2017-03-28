@@ -1,7 +1,7 @@
 ..  Copyright © J David Eisenberg
 
 Exercises in Arithmetic
-:::::::::::::::::::::::::::::
+''''''''''''''''''''''''
 
 .. container:: full_width
 

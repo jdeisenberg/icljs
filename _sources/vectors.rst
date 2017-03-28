@@ -3,7 +3,7 @@
    :trim:
 
 Vectors
-:::::::::
+'''''''''
 
 A vector is a series of items inside square brackets. You have seen vectors when you define functions; the parameter names are a vector.  
 Vectors are normally the choice for related items rather than lists. Consider this vector of prices:

@@ -5,7 +5,7 @@
    :trim:
 
 Maps (part 1)
-::::::::::::::::::::::::::::::::::::::::::::::
+''''''''''''''
     
 We have already covered two of the :doc:`collections </collections.rst>` used in ClojureScript: lists and vectors. Now let us consider **maps**. A **map** is a collection that associates keys with values. Let’s say you wanted to write a program to quiz people about the Canadian provinces and their capitals. You could set up two vectors::
   

@@ -3,8 +3,7 @@
    :trim:
 
 Manipulating Collections - reduce (part 2)
-:::::::::::::::::::::::::::::::::::::::::::::
-
+''''''''''''''''''''''''''''''''''''''''''''''
 
 Let’s return to the formula for standard deviation:
 

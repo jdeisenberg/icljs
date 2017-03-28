@@ -5,7 +5,7 @@
    :trim:
 
 Maps (part 2)
-::::::::::::::::::::::::::::::::::::::::::::::
+'''''''''''''''
     
 The `preceding page </maps1.rst>`_ shows string keys mapped to some other type of value. This is a typical use of maps in most programming languages. In ClojureScript, maps are also used to create **data structures**. Instead of using strings as keys, they use **keywords**. A keyword is a symbol name preceded by a colon, and they are widely used in ClojureScript.
 

@@ -19,7 +19,6 @@ Table of Contents
    :maxdepth: 2
 
    preface.rst
-   canvas_api.rst
    
 The Basics
 ===========
@@ -102,6 +101,7 @@ Project 1 - Graphing
   project_intro.rst
   canvas.rst
   canvas2.rst
+  coordinates.rst
    
 Appendices
 ==========

@@ -3,7 +3,7 @@
    :trim:
 
 Drawing on a canvas
-:::::::::::::::::::::::
+''''''''''''''''''''
 
 There are two ways to create graphics in a web page. One is to use `SVG`_ (scalable vector graphics), and the other is to use the HTML5 ``<canvas>`` element. Although I dearly love SVG, ``<canvas>`` seemed to be a better for this project.
 
