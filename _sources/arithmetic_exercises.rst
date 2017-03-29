@@ -23,7 +23,7 @@ Exercises in Arithmetic
                 #. ``((9 - 12) / 5) * 7`` → -4.2
                 #. ``((8 - 10) * 11) - ((14 - 2) + 7)`` → -41
 
-                .. activecode:: arithmetic_exercises_questoin
+                .. activecode:: arithmetic_exercises_question
                    :language: clojurescript
 
                    (* 5 2)
