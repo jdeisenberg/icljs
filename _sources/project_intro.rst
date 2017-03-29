@@ -30,7 +30,7 @@ Drawing a Graph
 
 There’s not much to say here but to review how graphs work in a *Cartesian coordinate system*, where points are described by *x* (horizontal) and *y* (vertical) coordinates. In the classic Cartesian system, the *origin* |---| point (0, 0) is where the *x* and *y* axes meet.
 
-.. image:: images/project1/cartesian.png
+.. image:: images/graphing/cartesian.png
   :alt: X and Y axes labeled, with (0,0) highlighted
 
 There is no law that says that the origin must be in the dead center of the graph, and, in fact, in the temperature graph, you see that it is near the lower left.

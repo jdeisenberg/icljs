@@ -17,7 +17,7 @@ To create a canvas, you need to specify a ``<canvas>`` element with a ``width`` 
   
 The coordinate system for a canvas has the origin (0,0) at the upper left corner. The values of *x* increase as you go to the right, and the values of *y* increase as you move downwards, as shown here:
   
-.. image:: images/project1/screen_coords.png
+.. image:: images/graphing/screen_coords.png
   :alt: X and Y axes labeled, with (0,0) at upper left
 
 Each unit on the canvas corresponds to one pixel. I’ll cover the transformation from cartesian coordinates (on the graph) to canvas coordinates (on the screen) later on, but for now, let’s concentrate on how to draw using the ``<canvas>`` API.  The first thing you need to do is get the *drawing context* for your canvas via the ``getContext`` method:
