@@ -49,9 +49,8 @@ You can also destructure in the parameter list. Here is destructuring in the sum
   (reduce sum-and-sumsq [0 0] [1 3 5 2])
 
 
-The `documentation from clojure.org`_ gives you all the details of destructuring; this page has discussed what they call “sequential destructuring”
+The `documentation from clojure.org <https://clojure.org/guides/destructuring>`_ gives you all the details of destructuring; this page has discussed what they call “sequential destructuring”
 
-.. documentation from clojure.org: https://clojure.org/guides/destructuring
 
 The description and examples there are excellent, and I will not attempt to improve on them or even paraphrase them. I recommend that you copy and paste the examples into the following active code area so you can see them in action.
 
