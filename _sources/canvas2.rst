@@ -50,3 +50,10 @@ Here are some of the things you can put in a path. A complete summary is `at thi
   
 ``(.arcto ctx x1 y1 x2 y2 r)``
     Draw an arc from point (*x1*, *y1*) to point (*x2*, *y2*). The arc is part of a circle with radius *r*.
+
+``(.-font ctx specifcation)``
+    Set the font *specification* a CSS-style string, for example ``'10px sans-serif'``
+    
+``(.fillText ctx text x y)``
+    Draws the given *text* at the specified (*x*, *y*) coordinate
+    
