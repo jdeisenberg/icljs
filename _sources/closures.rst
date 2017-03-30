@@ -2,10 +2,10 @@
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
 
-Graphing Program: Drawing
+Graphing Program: Closures
 '''''''''''''''''''''''''''
 
-All of the functions that do the actual drawing of the graph (axes, lines, dots, etc.), need to convert graph coordinates (*x*, y*) to the corresponding canvas coordinates, so the program needs a function like ``(to-screen [[x y]])``. But wait |---| this function needs to know the minimum and maximum *x* and *y* as well as the width and height of the canvas. You don’t want to “hard code” the numbers into the function for a particular canvas size (300 x 200) and graph dimensions (*x* from 0 to 7 and *y* from 0 to 25)::
+All of the functions that do the actual drawing of the graph (axes, lines, dots, etc.), need to convert graph coordinates (*x*, *y*) to the corresponding canvas coordinates, so the program needs a function like ``(to-screen [[x y]])``. But wait |---| this function needs to know the minimum and maximum *x* and *y* as well as the width and height of the canvas. You don’t want to “hard code” the numbers into the function for a particular canvas size (300 x 200) and graph dimensions (*x* from 0 to 7 and *y* from 0 to 25)::
 
   (defn to-screen [[x y]]
     (let [sx (+ (* (/ (* 0.85 300) 7) x) (* 0.075 300))
