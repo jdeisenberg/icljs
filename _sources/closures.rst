@@ -39,45 +39,4 @@ At this point, you may have an objection: “Hold on a second. The symbols ``mx`
 
 This solves the problem nicely. You can create a ``to-screen`` function for any size canvas or graph we want and just pass that function as one extra argument to all the drawing functions rather than passing a boatload of arguments at every call.
 
-There is one other item that needs to be passed to all the drawing functions: the canvas’s drawing context.  Rather than creating another parameter, this code creates a map that has the context and the conversion function in it. This code also summarize what has been done up to this point::
-
-    (def temperatures [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]])
-
-    (defn splitter
-      "Split temperatures into vectors of [index min]... and
-      [index max]...."
-      [data]
-      [(into [] (map-indexed
-                (fn [index [low hi]]
-                [(inc index) hi] data)))
-      (into [] (map-indexed
-                (fn [index [low hi]]
-                [(inc index) low]) data))])
-
-    (defn make-convert
-      "Create a function to create graph x-y coordinates
-      to screen coordinates in a canvas that is w by h"
-      [[min-x max-x] [min-y max-y] w h]
-      (let [mx (/ (* 0.85 w) (- max-x min-x))
-            my (/ (* 0.85 h) (- min-y max-y))]
-        (fn [[x y]]
-            [(+ (* mx (- x min-x)) (* 0.075 w))
-            (+ (* my (- y max-y)) (* 0.075 h))])))
-
-    (defn make-map
-      "Given an x and y range and a canvas ID, create
-      a map that has the canvas contet and a function that
-      will convert x/y to canvas coordinates."
-      [[min-x max-x][min-y max-y] canvasId]
-      (let [canvas (.getElementById js/document canvasId)
-            w (.-width canvas)
-            h (.-height canvas)]
-        {:ctx (.getContext canvas "2d")
-            :to-screen (make-convert [min-x max-x] [min-y max-y] w h)}))
-
-    (defn find-min-max
-      "Return the lowest and highest values from the source data."
-      [data]
-      (reduce (fn [[acc-min acc-max] [low high]])
-        [(if (< low acc-min) low acc-min)]
-        (if (> high acc-max) high acc-max) (first data) (rest data)))
+Now that the coordinate conversion program is in place, it is time to start drawing the graph.

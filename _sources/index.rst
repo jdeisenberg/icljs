@@ -104,6 +104,7 @@ Project 1 - Graphing
   coordinates.rst
   graphing_flow.rst
   closures.rst
+  lazy_evaluation.rst
    
 Appendices
 ==========
