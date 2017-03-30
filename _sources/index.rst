@@ -92,7 +92,7 @@ More Topics
    
    recursion.rst
    
-Project 1 - Graphing
+Project - Graphing
 =======================
 
 .. toctree::
@@ -105,6 +105,8 @@ Project 1 - Graphing
   graphing_flow.rst
   closures.rst
   lazy_evaluation.rst
+  proj1_completion.rst
+  proj1_solution.rst
    
 Appendices
 ==========
