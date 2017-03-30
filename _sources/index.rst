@@ -102,6 +102,8 @@ Project 1 - Graphing
   canvas.rst
   canvas2.rst
   coordinates.rst
+  graphing_flow.rst
+  closures.rst
    
 Appendices
 ==========
