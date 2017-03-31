@@ -16,9 +16,9 @@ The ``reduce`` function
 
 Here is the general form of the ``reduce`` function that we will use:
 
-::
+.. parsed-literal::
 
-    (reduce f initial collection)
+    (reduce *f* *initial* *collection*)
     
 where
 

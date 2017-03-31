@@ -11,9 +11,9 @@ The code to find out how wide some text is looks like this, where ``ctx`` is the
 
   (.-width (.measureText ctx "Some text"))
   
-For details see, the Mozilla documentation about the ``measureText`` method (`link <https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/measureText>`_\ ) and the ``textMetrics`` object (`link <https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics>`_\ ).
+For details, see the Mozilla documentation about the ``measureText`` method (`link <https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/measureText>`_\ ) and the ``textMetrics`` object (`link <https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics>`_\ ).
 
-At this point you might also want to create a ClojureScript project as described in `Appendix C </appendix_c.rst>` to complete the project rather than working in the browser. (You’ll eventually be creating ClojureScript projects, so why not start now?) If you do this, here is the HTML that you will need to put in the ``resources/public_html/index.html`` file::
+At this point you might also want to create a ClojureScript project as described in :doc:`Appendix C </appendix_c>` to complete the project rather than working in the browser. (You’ll eventually be creating ClojureScript projects, so why not start now?) If you do this, here is the HTML that you will need to put in the ``resources/public/index.html`` file::
 
     <!DOCTYPE html>
     <html>

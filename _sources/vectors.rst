@@ -22,6 +22,7 @@ Again, look at the following operations that work on all collections, which incl
 * ``first`` returns the first items in the collection
 * ``rest`` returns a sequence of all the items except the first one
 * ``last`` returns the last item in the collection
+* ``butlast`` returns a sequence of all the items except the last one
 * ``count`` gives you the number of items in the collection
 * ``vector?`` returns ``true`` if its argument is a vector, ``false`` otherwise
 * ``conj`` takes a collection and an item, and returns a new collection with that element added to the collection.

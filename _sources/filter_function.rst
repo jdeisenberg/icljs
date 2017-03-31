@@ -10,9 +10,9 @@ The ``filter`` function processes a collection and yields a sequence of the item
 
 Here is the general form of the ``filter`` function that we will use:
 
-::
+.. parsed-literal::
 
-    (reduce predicate collection)
+    (reduce *predicate* *collection*)
     
 where
 

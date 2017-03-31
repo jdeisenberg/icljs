@@ -28,7 +28,7 @@ What will you need to know to draw the graph? Among other things:
 Drawing a Graph
 =================
 
-There’s not much to say here but to review how graphs work in a *Cartesian coordinate system*, where points are described by *x* (horizontal) and *y* (vertical) coordinates. In the classic Cartesian system, the *origin* |---| point (0, 0) is where the *x* and *y* axes meet.
+Here’s an incredibly brief review of how graphs work in a *Cartesian coordinate system*, where points are described by *x* (horizontal) and *y* (vertical) coordinates. In the classic Cartesian system, the *origin* |---| point (0, 0) is where the *x* and *y* axes meet.
 
 .. image:: images/graphing/cartesian.png
   :alt: X and Y axes labeled, with (0,0) highlighted
@@ -91,36 +91,6 @@ Now, see if you can do the split of the temperatures. Hint: use ``map-indexed`` 
                         
                    (splitter temperatures)
 
-
-
-  
-.. container:: full_width
-
-    .. tabbed:: split_temperatures_x_y
-
-        .. tab:: Your code
-
-            .. activecode:: split_temperatures_new_q
-                :language: clojurescript
-
-                (defn split-temperatures [[min-vec max-vec] [min-temp max-temp]]
-                  (vector (conj min-vec min-temp) (conj max-vec max-temp)))
-                
-                (def temperatures [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]])
-                
-                (reduce split-temperatures [[] []] temperatures)
-        .. tab:: Answer
-
-            .. activecode:: split_temperatures_new_answer
-                :language: clojurescript
-                
-                (defn split-temperatures [[min-vec max-vec day] [min-temp max-temp]]
-                    (vector (conj min-vec [day min-temp]) (conj max-vec [day max-temp]) (inc day)))
-                
-                (def temperatures [[3 9] [2 13] [4 10] [4 9] [4 12] [9 20] [16 21]])
-                
-                (reduce split-temperatures [[] [] 1] temperatures)
-                
 In addition to splitting up the data, the program needs functions to:
   
 * Draw the axes

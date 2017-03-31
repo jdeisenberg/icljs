@@ -1,5 +1,3 @@
-.. 
-
 ..  Copyright © J David Eisenberg
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
    :trim:
@@ -7,7 +5,7 @@
 Maps (part 2)
 '''''''''''''''
     
-The `preceding page </maps1.rst>`_ shows string keys mapped to some other type of value. This is a typical use of maps in most programming languages. In ClojureScript, maps are also used to create **data structures**. Instead of using strings as keys, they use **keywords**. A keyword is a symbol name preceded by a colon, and they are widely used in ClojureScript.
+The :doc:`preceding page </maps1>` used strings as keys for the map. This is a typical use of maps in most programming languages. In ClojureScript, maps are also used to create **data structures**. Instead of using strings as keys, they use **keywords**. A keyword is a symbol name preceded by a colon, and they are widely used in ClojureScript.
 
 Let’s say you wanted to a data structure to describe a Canadian province that would show the province name, its capital, its population, and its latitude and longitude (as a vector of two numbers). You could set up a map like this for Ontario:
   
@@ -94,7 +92,7 @@ It is much easier with ``assoc-in``:
   
   (assoc-in event [:contact :email] "doakes@example.com")
   
-If you give a key and value that aren’t in the map, they will be added. So, given the definition of the event, see if you can write an expresson tht will add a ``:price`` key to the event.  The value for that key will be a map with a key ``:adult`` and value 7.50. The resulting map will be::
+If you give a key and value that aren’t in the map, they will be added. So, given the definition of the event, see if you can write an expresson that will add a ``:price`` key to the event.  The value for that key will be a map with a key ``:adult`` and value 7.50. The resulting map will be::
 
   {:date "2017-10-02"
    :name "Annual Talent Show"

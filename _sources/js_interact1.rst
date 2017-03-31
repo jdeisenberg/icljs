@@ -62,7 +62,7 @@ and (*x*\ :sub:`2`\ , *y*\ :sub:`2`\ ), using the Pythagorean distance formula:
     </math>
     
        
-You will need a square root function, but you can’t write something like ``(sqrt 3)`` because ClojureScript doesn’t have a built-in square root function, you need to use the ``sqrt`` function built into JavaScript’s ``Math`` object. Here’s the code:
+You will need a square root function, but you can’t write something like ``(sqrt 3)`` because ClojureScript doesn’t have a built-in square root function. You need to use the ``sqrt`` function built into JavaScript’s ``Math`` object. Here’s the code:
     
 .. activecode:: distance
     :caption: Distance Formula
@@ -80,7 +80,7 @@ Here’s the key part: ``(.sqrt js/Math ...)``. In order to understand exactly w
 JavaScript Objects
 ==================
 
-One of JavaScript’s key concepts is an *object*. You can think of an object as a way of bundling data and the functions related to that data together. (This is a massive, and probably grotesque, oversimplification, but it will serve.)  In object-programming terms, the data are called *properties* and the functions are called *methods*. The ``Math`` object has properties like ``PI`` and methods like ``sqrt``, ``sin``, `and so on`_. A web page has a ``document`` object. One of its properties is the ``title`` property; a piece of data that contains the document’s title. One of a document’s methods is the ``getSelection()`` method; this function returns the text that the person reading the web page has selected. 
+One of JavaScript’s key concepts is an *object*. You can think of an object as a way of bundling data and the functions related to that data together. (This is a massive and probably grotesque oversimplification, but it will serve.)  In object-programming terms, the data are called *properties* and the functions are called *methods*. The ``Math`` object has properties like ``PI`` and methods like ``sqrt``, ``sin``, `and so on`_. A web page has a ``document`` object. One of its properties is the ``title`` property; a piece of data that contains the document’s title. One of a document’s methods is the ``getSelection()`` method; this function returns the text that the person reading the web page has selected. 
 
 .. _and so on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 

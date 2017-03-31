@@ -19,7 +19,7 @@ That would be good for only this one particular graph, and you might very well w
           sy (+ (* (/ (* 0.85 (- min-y max-y))) (- y max-y)) (* 0.075 h))]
       [sx sy]))
 
-Surely there must be a better way! `Insert obligatory Airplane joke here.<http://www.vulture.com/2016/01/airplane-dont-call-me-shirley.html>`_ And indeed there is. You write a function that takes all those parameters and returns a conversion function to you. That’s the ``make-convert`` function in the following code:
+Surely there must be a better way! (Insert obligatory `Airplane  <http://www.vulture.com/2016/01/airplane-dont-call-me-shirley.html>`_ joke here.)  And indeed there is. You write a function that takes all those parameters and returns a conversion function to you. That’s the ``make-convert`` function in the following code:
 
 .. activecode:: make_function
     :language: clojurescript
@@ -35,8 +35,8 @@ Surely there must be a better way! `Insert obligatory Airplane joke here.<http:/
     (def to-screen (make-convert [0 7] [0 25] [300 200]))
     (to-screen [0 0])
     
-At this point, you may have an objection: “Hold on a second. The symbols ``mx`` and ``my`` are `local bindings </local_syms.rst>`_  that don’t exist outside of ``make-convert``. Once it finishes returning the anonymous function, dom’t those bindings vanish?”  Ordinarily, this is the case. However, when a function has access to symbols defined outside its scope (in this case, ``mx``, ``min-x``, etc.), those symbols do not vanish. Their values at the time the anonymous function was created are “locked in” to the definition and remain available. In computer science, this is referred to as a **closure** (not to be confused with the Clojure in ClojureScript). To paraphrase Wikipedia, a closure is a record storing a function together with the environment in which it was created.
+At this point, you may have an objection: “Hold on a second. The symbols ``mx`` and ``my`` are :doc:`local bindings </local_syms>`  that don’t exist outside of ``make-convert``. Once it finishes returning the anonymous function, dom’t those bindings vanish?”  Ordinarily, this is the case. However, when a function has access to symbols defined outside its scope (in this case, ``mx``, ``min-x``, etc.), those symbols do not vanish. Their values at the time the anonymous function was created are “locked in” to the definition and remain available. In computer science, this is referred to as a **closure** (not to be confused with the Clojure in ClojureScript). To paraphrase Wikipedia, a closure is a record storing a function together with the environment in which it was created.
 
-This solves the problem nicely. You can create a ``to-screen`` function for any size canvas or graph we want and just pass that function as one extra argument to all the drawing functions rather than passing a boatload of arguments at every call.
+This solves the problem nicely. You can create a ``to-screen`` function for any size canvas or graph you want and just pass that function as one extra argument to all the drawing functions rather than passing a boatload of arguments at every call.
 
 Now that the coordinate conversion program is in place, it is time to start drawing the graph.

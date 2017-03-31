@@ -76,7 +76,7 @@ The first three ``def``\ s bind the input text field, the button, and the result
 
 The ``calculate`` function is an *event handler*. Event handlers have one parameter: the JavaScript event object that caused the function to be called. In this instance, the code doesn’t need any of the event information. (Sometimes this information is useful; for example, a mouse click event carries properties telling where you clicked on the screen, which mouse button was pressed, etc.)
 
-The first ``let`` binding gets the value property of the input element. This value is always a string, so the code must ``js/parseInt`` to convert it to a number.
+The first ``let`` binding gets the ``value`` property of the input element. This value is always a string, so the code must ``js/parseInt`` to convert it to a number.
 The next binding calculates the result that goes on the screen.
 
 Finally, the ``set!`` function sets the ``innnerHTML`` property of the result paragraph to a string that informs the user how old they are in days. (``innerHTML`` means “the HTML that is between the opening and closing tag of the element.”)

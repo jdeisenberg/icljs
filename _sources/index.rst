@@ -108,6 +108,14 @@ Project - Graphing
   proj1_completion.rst
   proj1_solution.rst
    
+Summary
+=========
+
+.. toctree::
+  :maxdepth: 2
+  
+  summary.rst
+
 Appendices
 ==========
 

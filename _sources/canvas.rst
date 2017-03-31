@@ -5,9 +5,7 @@
 Drawing on a canvas
 ''''''''''''''''''''
 
-There are two ways to create graphics in a web page. One is to use `SVG`_ (scalable vector graphics), and the other is to use the HTML5 ``<canvas>`` element. Although I dearly love SVG, ``<canvas>`` seemed to be a better for this project.
-
-_SVG: https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
+There are two ways to create graphics in a web page. One is to use `SVG <https://en.wikipedia.org/wiki/Scalable_Vector_Graphics>`_ (scalable vector graphics), and the other is to use the HTML5 ``<canvas>`` element. Although I dearly love SVG, ``<canvas>`` seemed to be a better for this project.
 
 To create a canvas, you need to specify a ``<canvas>`` element with a ``width`` and ``height`` attribute.  You can put text between the opening and closing tags; it will be shown if the browser is unable to display the canvas. The following HTML produces the canvas you will see further down the page (I have enclosed it in a bordered ``<div>`` so you can see its boundaries more clearly::
   
