@@ -102,3 +102,7 @@ The source files for this book are on GitHub at `<https://github.com/jdeisenberg
 
 .. _this fork of RunestoneComponents: https://github.com/jdeisenberg/RunestoneComponents
 
+Acknowledgments
+=================
+
+Thanks to all the people on the Clojure and ClojureScript IRC and Slack channels who answered my questions and got me unstuck when I went down the wrong path.
