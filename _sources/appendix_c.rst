@@ -19,9 +19,9 @@ To install Leiningen, go to `its website`_ and download and install it per the i
 
 To create a new project with Leiningen, you use a command in the form
 
-::
+.. parsed-literal::
 
-    lein new template projectname
+    lein new *template* *projectname*
     
 where ``template`` is the name of a project template and ``projectname`` is the name of the project you want to build. The project we will use in this case is the ``figwheel`` project, which creates projects that let you build and test your code in a highly interactive manner. Start with a project named ``it-works``, as follows:
 
@@ -55,7 +55,7 @@ We’ll come back and do that later, but first, look at the directory structure 
         └── it_works
             └── core.cljs
 
-Since figwheel presumes you are building a web application, it has created a the ``resources/public`` directory that holds the web page resources. Your code is in the file ``src/it_works/core.cljs``\. Notice that the project name (``it-works``) has a hyphen, but due to the way that ClojureScript works, the directory name has changed the hyphen to an underscore (``it_works``).
+Since figwheel presumes you are building a web application, it has created the ``resources/public`` directory that holds the web page resources. Your code is in the file ``src/it_works/core.cljs``\. Notice that the project name (``it-works``) has a hyphen, but due to the way that ClojureScript works, the directory name has changed the hyphen to an underscore (``it_works``).
 
 Here are the contents of the ``core.cljs`` file:
 

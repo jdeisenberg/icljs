@@ -12,7 +12,7 @@ This appendix gives an extremely abbreviated summary of HTML; you will learn jus
 Structure of an HTML Document
 ===============================
 
-Normally, a web page lives in a file in the form of an HTMl document. The structure of an HTML document is a lot like the structure of a business letter. Business letters have:
+Normally, a web page lives in a file in the form of an HTML document. The structure of an HTML document is a lot like the structure of a business letter. Business letters have:
     
 * a letterhead, telling the name of the business
 * a heading, giving information about the date, sender, and receiver
